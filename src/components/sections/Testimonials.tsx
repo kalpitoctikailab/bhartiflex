@@ -79,7 +79,9 @@ export default function Testimonials() {
 
                 {/* Feedback Text */}
                 <p className="text-lg lg:text-xl text-text-secondary leading-relaxed mb-10 font-medium">
-                  "{current.feedback}"
+                  <span className="text-text-primary/40">&ldquo;</span>
+                  {current.feedback}
+                  <span className="text-text-primary/40">&rdquo;</span>
                 </p>
 
                 {/* Name / Role */}

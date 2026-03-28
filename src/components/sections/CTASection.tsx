@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Rocket, FileText, MessageSquare, Settings, Handshake } from "lucide-react";
+import { ArrowRight, FileText, Settings, Handshake } from "lucide-react";
 
 const CTAS = [
   {

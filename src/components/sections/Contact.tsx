@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { COMPANY_DETAILS } from "@/lib/constants";
 
 export default function Contact() {
@@ -19,7 +19,7 @@ export default function Contact() {
               className="mb-10"
             >
               <h2 className="text-4xl md:text-5xl font-extrabold text-text-primary mb-4">
-                Let's Build <span className="text-primary">Together.</span>
+                Let&apos;s Build <span className="text-primary">Together.</span>
               </h2>
               <p className="text-lg text-text-secondary pr-4">
                 Have a challenging project? Our engineering team is ready to analyze your requirements and provide custom solutions.

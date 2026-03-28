@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Coordinates for specific regions and countries mentioned by user
 // Using equirectangular projection logic for consistent mapping
@@ -57,10 +58,13 @@ export default function GlobalReach() {
             transition={{ duration: 1.5 }}
             className="w-full relative px-4"
           >
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
               alt="World map showing Bhartiflex global presence"
+              width={2759}
+              height={1394}
               className="w-full h-auto opacity-[0.08]"
+              unoptimized
               style={{
                 filter:
                   "invert(14%) sepia(13%) saturate(1400%) hue-rotate(180deg) brightness(90%) contrast(90%)",

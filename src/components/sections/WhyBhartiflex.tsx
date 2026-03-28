@@ -29,7 +29,7 @@ export default function WhyBhartiflex() {
                 Why Industry Leaders Choose <span className="text-primary">Bhartiflex.</span>
               </h2>
               <p className="text-text-secondary text-lg leading-relaxed">
-                With over five decades of engineering expertise, we don't just manufacture components; we engineer reliability. Our hand-built approach ensures maximum operational safety and longevity.
+                With over five decades of engineering expertise, we don&apos;t just manufacture components; we engineer reliability. Our hand-built approach ensures maximum operational safety and longevity.
               </p>
             </motion.div>
 
@@ -102,7 +102,7 @@ export default function WhyBhartiflex() {
               
               <div className="mt-10 pt-6 border-t border-slate-200">
                 <blockquote className="text-sm italic text-slate-500 border-l-2 border-primary pl-4 py-1">
-                  "Engineered to flex. Built to last."
+                  &ldquo;Engineered to flex. Built to last.&rdquo;
                 </blockquote>
               </div>
             </div>

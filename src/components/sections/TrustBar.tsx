@@ -15,7 +15,7 @@ export default function TrustBar() {
           viewport={{ once: true }}
           className="text-xs font-bold tracking-[0.3em] text-white/40 uppercase"
         >
-          // Trusted by Industry Leaders Worldwide
+          {"// Trusted by Industry Leaders Worldwide"}
         </motion.p>
       </div>
 
