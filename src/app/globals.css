@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* === Industrial Bold Palette === */
+  --color-primary: #E8460A;          /* Industrial Orange */
+  --color-primary-dark: #C23908;     /* Darker orange for hover */
+  --color-secondary: #FFB800;        /* Construction Yellow – accent alternate */
+  --color-highlight: #F97316;        /* Warm orange highlight */
+  --color-background: #FFFFFF;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-surface: #F5F4F2;          /* Warm off-white */
+  --color-surface-hover: #EDEBE8;
+  --color-dark: #111418;             /* Section dark backgrounds */
+  --color-dark-2: #1A1D23;           /* Slightly lighter dark */
+
+  /* === Typography === */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FFFFFF;
+    --foreground: #0F172A;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-sans antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass-panel {
+    @apply bg-white border border-slate-200 shadow-sm rounded-2xl;
+  }
+  
+  .glass-panel-hover {
+    @apply hover:border-primary/30 hover:shadow-md transition-all duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-primary to-highlight;
+  }
+
+  /* Industrial divider – slanted bottom edge */
+  .slant-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .slant-top {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Orange accent tag / pill used for section labels */
+  .label-tag {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary;
+  }
+
+  .label-tag::before {
+    content: "//";
+    @apply text-primary/60;
+  }
 }
