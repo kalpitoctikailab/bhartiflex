@@ -4,8 +4,9 @@ import WhyBhartiflex from "@/components/sections/WhyBhartiflex";
 import Testimonials from "@/components/sections/Testimonials";
 
 export const metadata = {
-  title: "About Us | Bhartiflex",
-  description: "Learn about the engineering pedigree and 50 years of trust behind Bhartiflex.",
+  title: "About Us | SHROFF PROCESS PRODUCTS",
+  description:
+    "Learn about the engineering pedigree and 50 years of trust behind SHROFF PROCESS PRODUCTS.",
 };
 
 export default function AboutPage() {

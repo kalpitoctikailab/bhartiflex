@@ -14,8 +14,10 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2 group mb-6">
               <Hexagon className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
-              <span className="font-heading font-bold text-2xl tracking-tight text-white">
-                Bharti<span className="text-primary font-light">flex</span>
+              <span className="font-heading font-extrabold text-xl tracking-tight text-white">
+                <span className="text-primary">SHROFF</span>{" "}
+                <span className="text-white/85">PROCESS</span>{" "}
+                <span className="text-white">PRODUCTS</span>
               </span>
             </Link>
             <p className="text-white/60 mb-6 leading-relaxed">
@@ -65,7 +67,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center gap-4">
           <p className="text-white/45 text-sm text-center">
-            &copy; {new Date().getFullYear()} Bhartiflex. A division of {COMPANY_DETAILS.parent}. All rights reserved.
+            &copy; {new Date().getFullYear()} {COMPANY_DETAILS.name}. All rights reserved.
           </p>
         </div>
       </div>

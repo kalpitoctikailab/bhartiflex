@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return { title: "Product Not Found" };
   
   return {
-    title: `${product.title} | Bhartiflex`,
+    title: `${product.title} | SHROFF PROCESS PRODUCTS`,
     description: product.description,
   };
 }
@@ -102,7 +102,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 Request Specs
               </a>
               <a 
-                href="tel:+919876543210" 
+                href="tel:+919227105232" 
                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white hover:bg-slate-50 border border-slate-300 text-text-primary font-bold py-3.5 px-8 rounded-full transition-all shadow-sm whitespace-nowrap"
               >
                 <PhoneCall size={18} className="text-primary" />

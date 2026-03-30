@@ -51,8 +51,18 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group shrink-0">
           <Hexagon className="w-8 h-8 text-primary transition-colors duration-300" strokeWidth={1.5} />
-          <span className={clsx("font-heading font-extrabold text-2xl tracking-tight transition-colors duration-300", logoTextColor)}>
-            Bharti<span className="text-primary font-bold">flex</span>
+          <span
+            className={clsx(
+              "font-heading font-extrabold tracking-tight transition-colors duration-300",
+              "text-lg sm:text-xl lg:text-2xl",
+              logoTextColor
+            )}
+          >
+            <span className="text-primary">SHROFF</span>{" "}
+            <span className={clsx(useLightNavText ? "text-white/85" : "text-text-secondary")}>
+              PROCESS
+            </span>{" "}
+            <span className={clsx(useLightNavText ? "text-white" : "text-text-primary")}>PRODUCTS</span>
           </span>
         </Link>
 

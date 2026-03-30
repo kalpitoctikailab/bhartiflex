@@ -13,14 +13,17 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Bhartiflex | Hand-Built Rubber Expansion Bellows & Joints",
-  description: "Leading manufacturer, supplier & exporter of Rubber Expansion Bellows and Joints. Trusted by Tata, BHEL, NTPC & 500+ clients across 25+ countries since 1974.",
-  keywords: "rubber expansion bellows, expansion joints, industrial bellows, hand-built bellows, large diameter bellows, Bhartiflex, Shroff Process Products",
+  title: "SHROFF PROCESS PRODUCTS | Hand-Built Rubber Expansion Bellows & Joints",
+  description:
+    "Leading manufacturer, supplier & exporter of Rubber Expansion Bellows and Joints. Trusted by Tata, BHEL, NTPC & 500+ clients across 25+ countries since 1974.",
+  keywords:
+    "rubber expansion bellows, expansion joints, industrial bellows, hand-built bellows, large diameter bellows, SHROFF PROCESS PRODUCTS",
   openGraph: {
-    title: "Bhartiflex | Hand-Built Rubber Expansion Bellows & Joints",
-    description: "Leading manufacturer, supplier & exporter of Rubber Expansion Bellows and Joints. Trusted by Tata, BHEL, NTPC & 500+ clients across 25+ countries since 1974.",
-    url: "https://www.bhartiflex.com",
-    siteName: "Bhartiflex",
+    title: "SHROFF PROCESS PRODUCTS | Hand-Built Rubber Expansion Bellows & Joints",
+    description:
+      "Leading manufacturer, supplier & exporter of Rubber Expansion Bellows and Joints. Trusted by Tata, BHEL, NTPC & 500+ clients across 25+ countries since 1974.",
+    url: "https://www.shroffprocesspumps.com",
+    siteName: "SHROFF PROCESS PRODUCTS",
     locale: "en_US",
     type: "website",
   },
@@ -29,19 +32,19 @@ export const metadata: Metadata = {
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Bhartiflex",
-  "url": "https://www.bhartiflex.com",
-  "logo": "https://www.bhartiflex.com/logo.png",
+  "name": "SHROFF PROCESS PRODUCTS",
+  "url": "https://www.shroffprocesspumps.com",
+  "logo": "https://www.shroffprocesspumps.com/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+91-9876543210",
+    "telephone": "+91-9227105232",
     "contactType": "customer service",
     "areaServed": "Worldwide",
     "availableLanguage": ["English", "Hindi"]
   },
   "parentOrganization": {
     "@type": "Organization",
-    "name": "Shroff Process Products"
+    "name": "SHROFF PROCESS PRODUCTS"
   }
 };
 

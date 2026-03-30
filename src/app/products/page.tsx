@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Box } from "lucide-react";
 
 export const metadata = {
-  title: "Product Catalog | Bhartiflex",
+  title: "Product Catalog | SHROFF PROCESS PRODUCTS",
   description:
     "Browse our comprehensive catalog of hand-built rubber expansion bellows, split retainer rings, and custom configurations.",
 };

@@ -1,7 +1,7 @@
 import Contact from "@/components/sections/Contact";
 
 export const metadata = {
-  title: "Contact Us | Bhartiflex",
+  title: "Contact Us | SHROFF PROCESS PRODUCTS",
   description: "Get in touch for technical consultation and project quotes.",
 };
 

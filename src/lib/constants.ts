@@ -1,13 +1,14 @@
 export const COMPANY_DETAILS = {
-  name: "Bhartiflex",
-  parent: "Shroff Process Products",
+  name: "SHROFF PROCESS PRODUCTS",
+  parent: "SHROFF PROCESS PRODUCTS",
   tagline: "Engineered to Flex. Built to Last.",
   yearFounded: 1974,
   countriesServed: 25,
   clientsCount: 500,
-  email: "sales@bhartiflex.com",
-  phone: "+91-9876543210",
-  address: "Surat, India",
+  email: "shroffproducts@gmail.com, info@shroffprocesspumps.com",
+  phone: "+91-9227105232",
+  address:
+    "A3/121, Associated Society, Old Padra Road, Vadodara - 390020, Gujarat Bharat",
 };
 
 export const NAV_LINKS = [
@@ -39,7 +40,7 @@ export const PRODUCTS_CATALOG = [
     title: "Rubber Expansion Joints SE Type",
     description:
       "Standard rubber expansion joints designed to absorb vibration, compensate for thermal expansion, misalignment, and movement. Long service life compared to molded bellows.",
-    image: "/client_data/Rubber Expansion Joints SE type 3D.jpg",
+    image: "/products/se-type-rubber-expansion-joints.jpg",
     features: [
       "Vibration absorbing",
       "Thermal compensation",
@@ -52,7 +53,7 @@ export const PRODUCTS_CATALOG = [
     title: "1500 NB CU Type Bellow",
     description:
       "Extra-large hand-built bellow specifically designed for 1500 Nominal Bore pipelines, complete with Control Units (CU) to limit excessive movement.",
-    image: "/client_data/Rubber Expansion Bellow 1500 NB CU Type 3D.jpg",
+    image: "/products/1500-nb-cu-type-bellow.jpg",
     features: [
       "Custom extra-large sizing",
       "Integrated control units",
@@ -78,7 +79,7 @@ export const PRODUCTS_CATALOG = [
     title: "Rubber Expansion Bellow SRR Type",
     description:
       "Specialized bellow with Split Retainer Rings (SRR) for secure seating and enhanced pressure resistance. Ideal for intense industrial environments.",
-    image: "/client_data/Rubber Expansion Bellow SRR Type 3D.jpg",
+    image: "/products/srr-type-bellow.jpg",
     features: [
       "Split Retainer Ring construction",
       "Enhanced pressure handling",
@@ -92,7 +93,7 @@ export const PRODUCTS_CATALOG = [
     description:
       "Custom-configured bellow for bus duct systems featuring split retainer rings, ensuring weatherproofing and dust exclusion for electrical installations.",
     image:
-      "/client_data/Bus Duct Rubber Bellow with Split Retiner Rings 3D.jpg",
+      "/products/bus-duct-split-retainer-rings.jpg",
     features: [
       "Precise bus duct fitting",
       "Weather and dust resistant",
@@ -106,7 +107,7 @@ export const PRODUCTS_CATALOG = [
     description:
       "Advanced Raised Face (RF) bellow configuration featuring swivel flanges for easy alignment and welded stretcher plates for structural control.",
     image:
-      "/client_data/Rubber Expansion Joint Bellows RF Type Swivel Flanges with Welded Strcher Plates 3D.jpg",
+      "/products/rf-type-swivel-flanges-welded-stretcher.jpg",
     features: [
       "Swivel flanges for easy alignment",
       "Welded stretcher plates",
@@ -119,7 +120,7 @@ export const PRODUCTS_CATALOG = [
     title: "Clamp Type Bellow - Multiple Arcs",
     description:
       "Flexible clamp-style installation bellow featuring multiple arcs for maximum movement compensation in tight piping structures.",
-    image: "/client_data/Rubber Bellow Clamp Type Multiple Arcs 3D.jpg",
+    image: "/products/clamp-type-multiple-arcs.jpg",
     features: [
       "Clamp-style installation",
       "Multiple movement arcs",
@@ -132,7 +133,7 @@ export const PRODUCTS_CATALOG = [
     title: "Clamp Type Bellow - Single Arc",
     description:
       "A streamlined single-arc clamp bellow offering essential vibration isolation and simple installation for standard piping requirements.",
-    image: "/client_data/Rubber Bellow Clamp Type Single Arc 3D.jpg",
+    image: "/products/clamp-type-single-arc.jpg",
     features: [
       "Single-arc design",
       "Simple clamp installation",
@@ -145,7 +146,7 @@ export const PRODUCTS_CATALOG = [
     title: "Rectangular Bus Duct Bellow - 2 Arcs",
     description:
       "Custom rectangular profile bellows featuring dual arcs, designed explicitly to protect heavy-duty rectangular bus duct enclosures.",
-    image: "/client_data/Rubber Bus Duct Bellows 2 Arcs Rectangular 3D.jpg",
+    image: "/products/bus-duct-rectangular-2-arcs.jpg",
     features: [
       "Custom rectangular profile",
       "Dual-arc flexibility",
@@ -158,7 +159,7 @@ export const PRODUCTS_CATALOG = [
     title: "Rubber Diaphragms for Weir Type Valves",
     description:
       "Precision-molded rubber diaphragms engineered specifically for weir type valves, offering superior chemical resistance and flow control.",
-    image: "/client_data/Rubber Diaphragms for Weir Type Valves 3D.jpg",
+    image: "/products/diaphragms-weir-valves.jpg",
     features: [
       "Weir valve compatibility",
       "Chemical resistant",
