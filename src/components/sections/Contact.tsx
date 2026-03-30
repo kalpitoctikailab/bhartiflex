@@ -3,8 +3,56 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { COMPANY_DETAILS } from "@/lib/constants";
+import { useMemo, useState } from "react";
 
 export default function Contact() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [requirements, setRequirements] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<null | { type: "success" | "error"; message: string }>(null);
+
+  const canSubmit = useMemo(() => {
+    const e = email.trim();
+    return firstName.trim().length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e) && requirements.trim().length > 0;
+  }, [email, firstName, requirements]);
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus(null);
+    if (!canSubmit || isSubmitting) return;
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          requirements,
+        }),
+      });
+      const data = (await res.json()) as { ok: boolean; error?: string };
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || "Failed to send inquiry");
+      }
+      setStatus({ type: "success", message: "Thanks — your inquiry has been sent. We’ll contact you shortly." });
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setRequirements("");
+    } catch (err) {
+      setStatus({
+        type: "error",
+        message: err instanceof Error ? err.message : "Something went wrong. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section id="contact" className="py-24 bg-surface relative overflow-hidden">
       <div className="container relative z-10">
@@ -87,12 +135,27 @@ export default function Contact() {
             <div className="glass-panel p-8 md:p-10 shadow-lg relative z-10">
               <h3 className="text-2xl font-bold font-heading text-text-primary mb-6">Request Technical Specs</h3>
               
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={onSubmit}>
+                {status && (
+                  <div
+                    className={
+                      status.type === "success"
+                        ? "rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800"
+                        : "rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800"
+                    }
+                    role={status.type === "error" ? "alert" : "status"}
+                  >
+                    {status.message}
+                  </div>
+                )}
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-slate-600">First Name</label>
                     <input 
                       type="text" 
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
                       className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                       placeholder="John"
                     />
@@ -101,6 +164,8 @@ export default function Contact() {
                     <label className="text-sm font-semibold text-slate-600">Last Name</label>
                     <input 
                       type="text" 
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
                       className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                       placeholder="Doe"
                     />
@@ -111,6 +176,9 @@ export default function Contact() {
                   <label className="text-sm font-semibold text-slate-600">Corporate Email</label>
                   <input 
                     type="email" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                     className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                     placeholder="john@company.com"
                   />
@@ -120,6 +188,9 @@ export default function Contact() {
                   <label className="text-sm font-semibold text-slate-600">Project Requirements</label>
                   <textarea 
                     rows={4}
+                    value={requirements}
+                    onChange={(e) => setRequirements(e.target.value)}
+                    required
                     className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
                     placeholder="Describe your operating conditions, temperature, pressure, etc..."
                   ></textarea>
@@ -127,10 +198,14 @@ export default function Contact() {
 
                 <button 
                   type="submit"
-                  className="w-full py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                  disabled={!canSubmit || isSubmitting}
+                  className="w-full py-4 bg-primary hover:bg-primary/90 disabled:bg-primary/60 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group shadow-md hover:shadow-lg hover:-translate-y-0.5"
                 >
-                  Send Inquiry
-                  <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  {isSubmitting ? "Sending..." : "Send Inquiry"}
+                  <Send
+                    size={18}
+                    className={isSubmitting ? "" : "group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"}
+                  />
                 </button>
               </form>
             </div>
