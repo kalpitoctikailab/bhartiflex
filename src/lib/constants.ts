@@ -8,7 +8,7 @@ export const COMPANY_DETAILS = {
   /** Use with tel: href (digits, E.164-style) */
   phone: "+919227105232",
   /** Obfuscated display (no extra labels — section headings provide context) */
-  phoneDisplay: "Nine double two seven one zero five two three two",
+  phoneDisplay: "(+91) Nine double two seven one zero five two three two",
   emailPrimary: "shroffproducts@gmail.com",
   emailSecondary: "info@shroffprocesspumps.com",
   emailDisplayLine1: "shroffproducts (at) gmail (dot) com",
@@ -98,8 +98,7 @@ export const PRODUCTS_CATALOG = [
     title: "Bus Duct Bellow with Split Retainer Rings",
     description:
       "Custom-configured bellow for bus duct systems featuring split retainer rings, ensuring weatherproofing and dust exclusion for electrical installations.",
-    image:
-      "/products/bus-duct-split-retainer-rings.jpg",
+    image: "/products/bus-duct-split-retainer-rings.jpg",
     features: [
       "Precise bus duct fitting",
       "Weather and dust resistant",
@@ -112,8 +111,7 @@ export const PRODUCTS_CATALOG = [
     title: "RF Type Bellow with Swivel Flanges & Welded Stretcher Plates",
     description:
       "Advanced Raised Face (RF) bellow configuration featuring swivel flanges for easy alignment and welded stretcher plates for structural control.",
-    image:
-      "/products/rf-type-swivel-flanges-welded-stretcher.jpg",
+    image: "/products/rf-type-swivel-flanges-welded-stretcher.jpg",
     features: [
       "Swivel flanges for easy alignment",
       "Welded stretcher plates",
