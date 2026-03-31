@@ -7,12 +7,11 @@ export const COMPANY_DETAILS = {
   clientsCount: 500,
   /** Use with tel: href (digits, E.164-style) */
   phone: "+919227105232",
-  /** Exact display copy requested */
-  phoneDisplay:
-    "Contact Number: Nine double two seven one zero five two three two",
+  /** Obfuscated display (no extra labels — section headings provide context) */
+  phoneDisplay: "Nine double two seven one zero five two three two",
   emailPrimary: "shroffproducts@gmail.com",
   emailSecondary: "info@shroffprocesspumps.com",
-  emailDisplayLine1: "Email: shroffproducts (at) gmail (dot) com",
+  emailDisplayLine1: "shroffproducts (at) gmail (dot) com",
   emailDisplayLine2: "info (at) shroffprocesspumps (dot) com",
   address:
     "A3/121, Associated Society, Old Padra Road, Vadodara - 390020, Gujarat Bharat",
