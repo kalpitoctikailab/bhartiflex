@@ -103,7 +103,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-text-primary font-bold mb-1">Direct Line</h4>
-                  <a href={`tel:${COMPANY_DETAILS.phone}`} className="text-text-secondary text-sm hover:text-primary transition-colors">{COMPANY_DETAILS.phone}</a>
+                  <a
+                    href={`tel:${COMPANY_DETAILS.phone}`}
+                    className="text-text-secondary text-sm hover:text-primary transition-colors leading-relaxed"
+                  >
+                    {COMPANY_DETAILS.phoneDisplay}
+                  </a>
                 </div>
               </motion.div>
 
@@ -119,7 +124,20 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-text-primary font-bold mb-1">Email Support</h4>
-                  <a href={`mailto:${COMPANY_DETAILS.email}`} className="text-text-secondary text-sm hover:text-primary transition-colors">{COMPANY_DETAILS.email}</a>
+                  <div className="text-text-secondary text-sm leading-relaxed space-y-1">
+                    <a
+                      href={`mailto:${COMPANY_DETAILS.emailPrimary}`}
+                      className="block hover:text-primary transition-colors"
+                    >
+                      {COMPANY_DETAILS.emailDisplayLine1}
+                    </a>
+                    <a
+                      href={`mailto:${COMPANY_DETAILS.emailSecondary}`}
+                      className="block hover:text-primary transition-colors"
+                    >
+                      {COMPANY_DETAILS.emailDisplayLine2}
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             </div>

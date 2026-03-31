@@ -94,7 +94,9 @@ export default function Navbar() {
             )}
           >
             <Phone size={14} className="text-primary" />
-            {COMPANY_DETAILS.phone}
+            <span className="text-left text-xs xl:text-sm leading-snug max-w-[min(100vw-12rem,28rem)]">
+              {COMPANY_DETAILS.phoneDisplay}
+            </span>
           </a>
           <Link
             href="/contact"

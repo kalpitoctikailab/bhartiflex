@@ -48,14 +48,23 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-6 uppercase tracking-wider font-heading">Contact Us</h4>
             <ul className="space-y-4 text-white/55">
               <li>{COMPANY_DETAILS.address}</li>
-              <li>
-                <a href={`mailto:${COMPANY_DETAILS.email}`} className="hover:text-white transition-colors">
-                  {COMPANY_DETAILS.email}
+              <li className="space-y-1">
+                <a
+                  href={`mailto:${COMPANY_DETAILS.emailPrimary}`}
+                  className="block hover:text-white transition-colors"
+                >
+                  {COMPANY_DETAILS.emailDisplayLine1}
+                </a>
+                <a
+                  href={`mailto:${COMPANY_DETAILS.emailSecondary}`}
+                  className="block hover:text-white transition-colors"
+                >
+                  {COMPANY_DETAILS.emailDisplayLine2}
                 </a>
               </li>
               <li>
                 <a href={`tel:${COMPANY_DETAILS.phone}`} className="hover:text-white transition-colors">
-                  {COMPANY_DETAILS.phone}
+                  {COMPANY_DETAILS.phoneDisplay}
                 </a>
               </li>
             </ul>

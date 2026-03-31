@@ -5,8 +5,15 @@ export const COMPANY_DETAILS = {
   yearFounded: 1974,
   countriesServed: 25,
   clientsCount: 500,
-  email: "shroffproducts@gmail.com, info@shroffprocesspumps.com",
-  phone: "+91-9227105232",
+  /** Use with tel: href (digits, E.164-style) */
+  phone: "+919227105232",
+  /** Exact display copy requested */
+  phoneDisplay:
+    "Contact Number: Nine double two seven one zero five two three two",
+  emailPrimary: "shroffproducts@gmail.com",
+  emailSecondary: "info@shroffprocesspumps.com",
+  emailDisplayLine1: "Email: shroffproducts (at) gmail (dot) com",
+  emailDisplayLine2: "info (at) shroffprocesspumps (dot) com",
   address:
     "A3/121, Associated Society, Old Padra Road, Vadodara - 390020, Gujarat Bharat",
 };
