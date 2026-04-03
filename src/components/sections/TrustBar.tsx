@@ -1,14 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CLIENT_LOGOS } from "@/lib/constants";
+import Image from "next/image";
+
+const CLIENT_LOGOS = [
+  { src: "/client-logos/Amul_official_logo.svg", alt: "Amul" },
+  { src: "/client-logos/JSW_Group_logo.svg", alt: "JSW" },
+  { src: "/client-logos/NTPC_logo.svg", alt: "NTPC" },
+  { src: "/client-logos/SAIL_Logo.svg", alt: "SAIL" },
+  { src: "/client-logos/Vedanta.svg", alt: "Vedanta" },
+  { src: "/client-logos/bhel-logo.svg", alt: "BHEL" },
+  { src: "/client-logos/grasim_industries-logo.svg", alt: "Grasim" },
+  { src: "/client-logos/hindalco_logo.svg", alt: "Hindalco" },
+  { src: "/client-logos/hindustan_zinc_logo.svg", alt: "Hindustan Zinc" },
+] as const;
 
 export default function TrustBar() {
   const repeatedLogos = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
   return (
     <section className="py-10 bg-dark overflow-hidden border-y border-white/5">
-      <div className="container mb-6 text-center">
+      <div className="container mb-10 text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,12 +39,18 @@ export default function TrustBar() {
         >
           {repeatedLogos.map((logo, index) => (
             <div
-              key={`${logo}-${index}`}
-              className="flex items-center justify-center opacity-30 hover:opacity-100 transition-all duration-300 group"
+              key={`${logo.src}-${index}`}
+              className="flex items-center justify-center opacity-100 transition-all duration-300 group"
             >
-              <span className="text-xl md:text-2xl font-black font-heading text-white group-hover:text-primary tracking-widest uppercase transition-colors duration-300">
-                {logo}
-              </span>
+              <div className="relative h-14 md:h-16 lg:h-20 w-[220px] md:w-[220px]">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  fill
+                  unoptimized
+                  className="object-contain object-center"
+                />
+              </div>
             </div>
           ))}
         </motion.div>

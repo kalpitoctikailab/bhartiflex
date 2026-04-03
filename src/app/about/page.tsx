@@ -2,6 +2,7 @@ import Stats from "@/components/sections/Stats";
 import ProcessStory from "@/components/sections/ProcessStory";
 import WhyBhartiflex from "@/components/sections/WhyBhartiflex";
 import Testimonials from "@/components/sections/Testimonials";
+import TrustBar from "@/components/sections/TrustBar";
 
 export const metadata = {
   title: "About Us | SHROFF PROCESS PRODUCTS",
@@ -17,10 +18,13 @@ export default function AboutPage() {
           Our <span className="text-primary">Pedigree.</span>
         </h1>
         <p className="text-text-secondary text-lg max-w-2xl">
-          For over five decades, we have engineered reliability into every hand-built expansion joint leaving our facility. Get to know how we work.
+          For over five decades, we have engineered reliability into every
+          hand-built expansion joint leaving our facility. Get to know how we
+          work.
         </p>
       </div>
       <Stats />
+      <TrustBar />
       <ProcessStory />
       <WhyBhartiflex />
       <Testimonials />

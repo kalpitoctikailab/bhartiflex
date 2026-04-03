@@ -46,7 +46,7 @@ export const PRODUCTS_CATALOG = [
     title: "Rubber Expansion Joints SE Type",
     description:
       "Standard rubber expansion joints designed to absorb vibration, compensate for thermal expansion, misalignment, and movement. Long service life compared to molded bellows.",
-    image: "/products/se-type-rubber-expansion-joints.jpg",
+    image: "/products/Rubber-Expansion-Joints-SE-Type.jpg",
     features: [
       "Vibration absorbing",
       "Thermal compensation",
@@ -59,7 +59,7 @@ export const PRODUCTS_CATALOG = [
     title: "1500 NB CU Type Bellow",
     description:
       "Extra-large hand-built bellow specifically designed for 1500 Nominal Bore pipelines, complete with Control Units (CU) to limit excessive movement.",
-    image: "/products/1500-nb-cu-type-bellow.jpg",
+    image: "/products/1500-NB-CU-Type-Bellow.jpg",
     features: [
       "Custom extra-large sizing",
       "Integrated control units",
@@ -72,7 +72,7 @@ export const PRODUCTS_CATALOG = [
     title: "FFR 1500 NB Type Bellow",
     description:
       "Heavy-duty expansion bellow with Full Face Rubber (FFR) flanges. Engineered for large pipelines requiring comprehensive sealing and flexibility.",
-    image: "/client_data/Rubber Expansion Joint Bellow FFR 1500 NB Type 3D.jpg",
+    image: "/products/FFR-1500-NB-Type-Bellow.jpg",
     features: [
       "Full Face Rubber flanges",
       "Secure sealing",
@@ -85,7 +85,7 @@ export const PRODUCTS_CATALOG = [
     title: "Rubber Expansion Bellow SRR Type",
     description:
       "Specialized bellow with Split Retainer Rings (SRR) for secure seating and enhanced pressure resistance. Ideal for intense industrial environments.",
-    image: "/products/srr-type-bellow.jpg",
+    image: "/products/Rubber-Expansion-Bellow-SRR-Type.jpg",
     features: [
       "Split Retainer Ring construction",
       "Enhanced pressure handling",
@@ -98,7 +98,7 @@ export const PRODUCTS_CATALOG = [
     title: "Bus Duct Bellow with Split Retainer Rings",
     description:
       "Custom-configured bellow for bus duct systems featuring split retainer rings, ensuring weatherproofing and dust exclusion for electrical installations.",
-    image: "/products/bus-duct-split-retainer-rings.jpg",
+    image: "/products/Bus-Duct-Bellow-with-Split-Retainer-Rings.jpg",
     features: [
       "Precise bus duct fitting",
       "Weather and dust resistant",
@@ -111,7 +111,8 @@ export const PRODUCTS_CATALOG = [
     title: "RF Type Bellow with Swivel Flanges & Welded Stretcher Plates",
     description:
       "Advanced Raised Face (RF) bellow configuration featuring swivel flanges for easy alignment and welded stretcher plates for structural control.",
-    image: "/products/rf-type-swivel-flanges-welded-stretcher.jpg",
+    image:
+      "/products/RF-Type-Bellow-with-Swivel-Flanges-Welded-Stretcher-Plates.jpg",
     features: [
       "Swivel flanges for easy alignment",
       "Welded stretcher plates",

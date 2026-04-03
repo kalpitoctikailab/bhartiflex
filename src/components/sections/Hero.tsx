@@ -8,11 +8,11 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 /** Back = large / top-right; front = smaller / bottom-left overlap (reference collage). */
 const HERO_COLLAGE = {
   back: {
-    src: "/projects/project-tall.jpg",
+    src: "/HeroBanner-1.jpg",
     alt: "Rubber expansion bellows with flange connections",
   },
   front: {
-    src: "/projects/project-detail.jpg",
+    src: "/HeroBanner-2.jpg",
     alt: "Industrial rubber expansion joint detail",
   },
 } as const;
@@ -121,8 +121,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-
-
 
       {/* Scroll indicator */}
       <motion.div
