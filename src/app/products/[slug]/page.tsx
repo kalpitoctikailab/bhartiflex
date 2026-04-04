@@ -31,6 +31,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     notFound();
   }
 
+  const detailHeroSrc = product.detailImage ?? product.image;
+
   return (
     <main className="pt-32 bg-white min-h-screen">
       <div className="container pb-20">
@@ -49,7 +51,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           {/* Left Column: Massive Focus Image */}
           <div className="lg:col-span-7 relative w-full aspect-square md:aspect-[4/3] lg:aspect-square bg-surface rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex items-center justify-center p-8 lg:p-16">
              <Image 
-                src={product.image} 
+                src={detailHeroSrc} 
                 alt={product.title}
                 fill
                 priority
