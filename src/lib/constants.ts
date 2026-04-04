@@ -59,7 +59,7 @@ export const PRODUCTS_CATALOG = [
     title: "1500 NB CU Type Bellow",
     description:
       "Extra-large hand-built bellow specifically designed for 1500 Nominal Bore pipelines, complete with Control Units (CU) to limit excessive movement.",
-    image: "/products/1500-NB-CU-Type-Bellow.jpg",
+    image: "/products/1500-NB-CU-Type.jpg",
     features: [
       "Custom extra-large sizing",
       "Integrated control units",
