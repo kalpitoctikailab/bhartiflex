@@ -133,7 +133,9 @@ export const PRODUCTS_CATALOG = [
     title: "Clamp Type Bellow - Multiple Arcs",
     description:
       "Flexible clamp-style installation bellow featuring multiple arcs for maximum movement compensation in tight piping structures.",
-    image: "/products/clamp-type-multiple-arcs.jpg",
+    image: "/products/Clamp-Type-Bellow-Multiple-Arcs.jpeg",
+    detailImage:
+      "/products/Clamp-Type-Bellow-Multiple-Arcs-detail.jpeg",
     features: [
       "Clamp-style installation",
       "Multiple movement arcs",
@@ -146,7 +148,9 @@ export const PRODUCTS_CATALOG = [
     title: "Clamp Type Bellow - Single Arc",
     description:
       "A streamlined single-arc clamp bellow offering essential vibration isolation and simple installation for standard piping requirements.",
-    image: "/products/clamp-type-single-arc.jpg",
+    image: "/products/Clamp-Type-Bellow-Single-Arc.jpeg",
+    detailImage:
+      "/products/Clamp-Type-Bellow-Single-Arc-detail.jpeg",
     features: [
       "Single-arc design",
       "Simple clamp installation",
@@ -159,7 +163,9 @@ export const PRODUCTS_CATALOG = [
     title: "Rectangular Bus Duct Bellow - 2 Arcs",
     description:
       "Custom rectangular profile bellows featuring dual arcs, designed explicitly to protect heavy-duty rectangular bus duct enclosures.",
-    image: "/products/bus-duct-rectangular-2-arcs.jpg",
+    image: "/products/Rectangular-Bus-Duct-Bellow-2-Arcs.jpeg",
+    detailImage:
+      "/products/Rectangular-Bus-Duct-Bellow-2-Arcs-detail.jpeg",
     features: [
       "Custom rectangular profile",
       "Dual-arc flexibility",
@@ -172,7 +178,9 @@ export const PRODUCTS_CATALOG = [
     title: "Rubber Diaphragms for Weir Type Valves",
     description:
       "Precision-molded rubber diaphragms engineered specifically for weir type valves, offering superior chemical resistance and flow control.",
-    image: "/products/diaphragms-weir-valves.jpg",
+    image: "/products/Rubber-Diaphragms-for-Weir-Type-Valves.jpeg",
+    detailImage:
+      "/products/Rubber-Diaphragms-for-Weir-Type-Valves-detail.jpeg",
     features: [
       "Weir valve compatibility",
       "Chemical resistant",
