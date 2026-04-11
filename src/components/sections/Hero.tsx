@@ -8,11 +8,11 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 /** Back = large / top-right; front = smaller / bottom-left overlap (reference collage). */
 const HERO_COLLAGE = {
   back: {
-    src: "/HeroBanner-1.jpg",
+    src: "/HeroBanner-1.jpeg",
     alt: "Rubber expansion bellows with flange connections",
   },
   front: {
-    src: "/HeroBanner-2.jpg",
+    src: "/HeroBanner-2.jpeg",
     alt: "Industrial rubber expansion joint detail",
   },
 } as const;
@@ -105,6 +105,7 @@ export default function Hero() {
                 className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 sizes="(max-width: 1024px) 85vw, 440px"
                 priority
+                loading="eager"
               />
             </div>
 

@@ -15,8 +15,31 @@ const CLIENT_LOGOS = [
   { src: "/client-logos/hindustan_zinc_logo.svg", alt: "Hindustan Zinc" },
 ] as const;
 
-export default function TrustBar() {
+export const HOME_INDUSTRY_SECTORS = [
+  "Power Generation",
+  "Steel & Metallurgy",
+  "Mining",
+  "Petrochemicals & Refineries",
+  "Chemical & Fertilizer Plants",
+  "Water & Wastewater Treatment",
+  "Fire Fighting",
+  "HVAC & Building Services",
+  "Marine & Shipbuilding",
+] as const;
+
+type TrustBarProps = {
+  /** When set, shows a scrolling list of sector names instead of client logos */
+  labels?: readonly string[];
+  /** Small uppercase line above the marquee */
+  eyebrow?: string;
+};
+
+export default function TrustBar({ labels, eyebrow }: TrustBarProps) {
   const repeatedLogos = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
+  const labelList = labels ? [...labels, ...labels] : null;
+  const resolvedEyebrow =
+    eyebrow ??
+    (labels ? "Industries We Serve" : "Trusted by Industry Leaders Worldwide");
 
   return (
     <section className="py-10 bg-dark overflow-hidden border-y border-white/5">
@@ -27,32 +50,49 @@ export default function TrustBar() {
           viewport={{ once: true }}
           className="text-xs font-bold tracking-[0.3em] text-white/40 uppercase"
         >
-          {"// Trusted by Industry Leaders Worldwide"}
+          {resolvedEyebrow}
         </motion.p>
       </div>
 
       <div className="relative flex">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ ease: "linear", duration: 30, repeat: Infinity }}
-          className="flex gap-16 items-center px-8 w-max"
+          transition={{ ease: "linear", duration: labels ? 45 : 30, repeat: Infinity }}
+          className="flex gap-6 md:gap-10 items-center px-8 w-max"
         >
-          {repeatedLogos.map((logo, index) => (
-            <div
-              key={`${logo.src}-${index}`}
-              className="flex items-center justify-center opacity-100 transition-all duration-300 group"
-            >
-              <div className="relative h-14 md:h-16 lg:h-20 w-[220px] md:w-[220px]">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  fill
-                  unoptimized
-                  className="object-contain object-center"
-                />
-              </div>
-            </div>
-          ))}
+          {labelList
+            ? labelList.map((label, index) => (
+                <span
+                  key={`${label}-${index}`}
+                  className="inline-flex items-center gap-6 md:gap-8 shrink-0"
+                >
+                  <span className="text-sm md:text-lg font-semibold text-white/85 whitespace-nowrap tracking-tight">
+                    {label}
+                  </span>
+                  <span
+                    className="text-primary/90 text-lg font-light select-none"
+                    aria-hidden
+                  >
+                    ·
+                  </span>
+                </span>
+              ))
+            : repeatedLogos.map((logo, index) => (
+                <div
+                  key={`${logo.src}-${index}`}
+                  className="flex items-center justify-center opacity-100 transition-all duration-300 group"
+                >
+                  <div className="relative h-14 md:h-16 lg:h-20 w-[220px] md:w-[220px]">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      fill
+                      unoptimized
+                      className="object-contain object-center"
+                    />
+                  </div>
+                </div>
+              ))}
         </motion.div>
 
         {/* Dark gradient edge masks */}
