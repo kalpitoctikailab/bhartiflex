@@ -16,15 +16,15 @@ const CLIENT_LOGOS = [
 ] as const;
 
 export const HOME_INDUSTRY_SECTORS = [
-  "Power Generation",
-  "Steel & Metallurgy",
-  "Mining",
-  "Petrochemicals & Refineries",
-  "Chemical & Fertilizer Plants",
-  "Water & Wastewater Treatment",
-  "Fire Fighting",
-  "HVAC & Building Services",
-  "Marine & Shipbuilding",
+  "Pumps",
+  "Pipelines",
+  "HVAC",
+  "Water Treatment",
+  "Chemical Plants",
+  "Utility Piping",
+  "Power Plants",
+  "Steel Plants",
+  "Marine and Mining Industries",
 ] as const;
 
 type TrustBarProps = {

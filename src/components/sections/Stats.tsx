@@ -7,9 +7,9 @@ import { useRef } from "react";
 
 const statsData = [
   { value: 50, suffix: "+", label: "Years of Trust", desc: "Established in 1974" },
-  { value: 500, suffix: "+", label: "Global Clients", desc: "Across diverse sectors" },
+  { value: 1000, suffix: "+", label: "Global Clients", desc: "Across diverse sectors" },
   { value: 25, suffix: "+", label: "Countries Served", desc: "Worldwide export presence" },
-  { value: 10000, suffix: "+", label: "Custom Bellows", desc: "Manufactured & deployed" },
+  { value: 100000, suffix: "+", label: "Custom Bellows", desc: "Manufactured & deployed" },
 ];
 
 export default function Stats() {

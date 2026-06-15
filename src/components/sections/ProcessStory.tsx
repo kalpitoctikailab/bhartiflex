@@ -61,7 +61,7 @@ export default function ProcessStory() {
                       <h3 className="text-2xl md:text-3xl font-extrabold text-text-primary mb-4 tracking-tight">
                         {step.title}
                       </h3>
-                      <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                      <p className="text-slate-600 text-base leading-relaxed mb-8">
                         {step.description}
                       </p>
 

@@ -50,17 +50,16 @@ export default function Hero() {
 
           {/* Massive Heading */}
           <h1 className="text-[clamp(3rem,8vw,7.5rem)] font-heading font-black uppercase leading-[0.9] text-white tracking-tight mb-8">
-            Engineering
+            Flexible
             <br />
-            <span className="text-primary">Beyond</span>
+            <span className="text-primary">Piping </span>
             <br />
-            Limits.
+            Solutions.
           </h1>
 
           {/* Sub-copy */}
           <p className="text-white/60 text-lg md:text-xl max-w-xl leading-relaxed mb-10">
-            Hand-built Rubber Expansion Bellows &amp; Joints trusted by Tata
-            Steel, BHEL, NTPC, and 500+ industrial leaders across 25+ countries.
+            Hand-built Rubber Expansion Joints & Bellows trusted by industrial leaders across 25+ countries
           </p>
 
           {/* CTAs */}

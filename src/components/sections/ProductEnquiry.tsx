@@ -2,14 +2,20 @@
 
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
-import { COMPANY_DETAILS } from "@/lib/constants";
+import { COMPANY_DETAILS, PRODUCT_DN_SIZES } from "@/lib/constants";
 import { useMemo, useState } from "react";
 
-export default function Contact() {
+interface ProductEnquiryProps {
+  productTitle: string;
+  productSlug: string;
+}
+
+export default function ProductEnquiry({ productTitle, productSlug }: ProductEnquiryProps) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [companyName, setCompanyName] = useState("");
+  const [dnSize, setDnSize] = useState("");
+  const [faceToFaceLength, setFaceToFaceLength] = useState("");
   const [requirements, setRequirements] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<null | { type: "success" | "error"; message: string }>(null);
@@ -32,19 +38,26 @@ export default function Contact() {
           firstName,
           lastName,
           email,
-          companyName,
-          requirements,
+          requirements: [
+            `Product: ${productTitle} (${productSlug})`,
+            dnSize ? `DN Size: ${dnSize}` : null,
+            faceToFaceLength.trim() ? `Face-to-Face Length: ${faceToFaceLength.trim()} mm` : null,
+            requirements.trim() ? `Requirements: ${requirements.trim()}` : null,
+          ]
+            .filter(Boolean)
+            .join("\n"),
         }),
       });
       const data = (await res.json()) as { ok: boolean; error?: string };
       if (!res.ok || !data.ok) {
         throw new Error(data.error || "Failed to send inquiry");
       }
-      setStatus({ type: "success", message: "Thanks — your inquiry has been sent. We’ll contact you shortly." });
+      setStatus({ type: "success", message: "Thanks — your inquiry has been sent. We'll contact you shortly." });
       setFirstName("");
       setLastName("");
       setEmail("");
-      setCompanyName("");
+      setDnSize("");
+      setFaceToFaceLength("");
       setRequirements("");
     } catch (err) {
       setStatus({
@@ -146,7 +159,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right: Contact Form */}
+          {/* Right: Enquiry Form */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -205,15 +218,31 @@ export default function Contact() {
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-slate-600">Company Name</label>
-                  <input
-                    type="text"
-                    value={companyName}
-                    onChange={(e) => setCompanyName(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-                    placeholder="Acme Industries"
-                  />
+                {/* DN Size + Face-to-Face Length */}
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-slate-600">DN Size</label>
+                    <select
+                      value={dnSize}
+                      onChange={(e) => setDnSize(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                    >
+                      <option value="">Select DN Size</option>
+                      {PRODUCT_DN_SIZES.map((size) => (
+                        <option key={size} value={size}>{size}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-slate-600">Face-to-Face Length (mm)</label>
+                    <input
+                      type="text"
+                      value={faceToFaceLength}
+                      onChange={(e) => setFaceToFaceLength(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                      placeholder="e.g. 150"
+                    />
+                  </div>
                 </div>
 
                 <div className="space-y-2">

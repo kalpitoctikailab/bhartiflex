@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CheckCircle2, FileDown, PhoneCall } from "lucide-react";
-import Contact from "@/components/sections/Contact";
+import ProductEnquiry from "@/components/sections/ProductEnquiry";
+import SizeSelector from "@/components/ui/SizeSelector";
 
 // Generate SSG routes for all products
 export async function generateStaticParams() {
@@ -76,6 +77,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
               {product.description}
             </p>
 
+            {/* Size Dropdown */}
+            {"size" in product && product.size && <SizeSelector />}
+
             {/* Divider */}
             <div className="w-16 h-1 bg-slate-200 mb-10"></div>
 
@@ -93,6 +97,16 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 ))}
               </ul>
             </div>
+
+            {/* Size info — data only, no layout change */}
+            {"size" in product && product.size && (
+              <p className="text-sm font-semibold text-slate-500 mb-10">
+                Size: <span className="text-text-primary">{product.size}</span>
+                {"temperature" in product && product.temperature && product.temperature !== "—" && (
+                  <span className="ml-4">Temperature: <span className="text-text-primary">{product.temperature}</span></span>
+                )}
+              </p>
+            )}
 
             {/* Proper Horizontal Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full">
@@ -118,7 +132,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
       {/* Embedded Contact / Quote Section at the bottom */}
       <div id="quote-request" className="border-t border-slate-200">
-        <Contact />
+        <ProductEnquiry productTitle={product.title} productSlug={product.slug} />
       </div>
 
     </main>

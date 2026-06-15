@@ -40,7 +40,250 @@ export const CLIENT_LOGOS = [
   "AMUL",
 ];
 
+// ─── DN Size Options (used in product enquiry form) ─────────────────────────
+export const PRODUCT_DN_SIZES = [
+  "DN 25", "DN 32", "DN 40", "DN 50", "DN 65", "DN 80",
+  "DN 100", "DN 125", "DN 150", "DN 200", "DN 250", "DN 300",
+  "DN 350", "DN 400", "DN 450", "DN 500", "DN 600", "DN 700",
+  "DN 800", "DN 900", "DN 1000", "DN 1050", "DN 1100", "DN 1200",
+  "DN 1300", "DN 1400", "DN 1600", "DN 1800", "DN 2000",
+  "DN 2200", "DN 2400", "DN 2600", "DN 2800", "DN 3000",
+];
+
+// ─── Active Product Catalog ──────────────────────────────────────────────────
 export const PRODUCTS_CATALOG = [
+  {
+    slug: "cu-type-rubber-expansion-joint",
+    title: "CU Type – Rubber Expansion Joint",
+    subtitle: "Integral Rubber Flanges with Control Unit & Tie Rod Assembly",
+    size: "DN 25 to 3000 mm",
+    temperature: "Up to 120°C",
+    description:
+      "Rubber Expansion Joint with integral rubber flanges, supplied with Steel Split Retainer Rings, Control Unit Plates and Tie Rod Assembly. Engineered for systems requiring movement compensation in axial and lateral offset directions.",
+    image: "/products/1500-NB-CU-Type.jpg",
+    detailImage: "/products/1500-NB-CU-Type-Bellow-Detail.jpg",
+    features: [
+      "Robust design with integral rubber flanges",
+      "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+      "Moves in both axial and lateral offset directions",
+      "Thermal expansion, settlement and movement compensation",
+      "Compensation of misalignment",
+    ],
+  },
+  {
+    slug: "srr-type-rubber-expansion-joint",
+    title: "SRR Type – Rubber Expansion Joint",
+    subtitle: "Integral Rubber Flanges with Steel Split Retainer Rings",
+    size: "DN 25 to 3000 mm",
+    temperature: "Up to 120°C",
+    description:
+      "Rubber Expansion Joint with integral rubber flanges, supplied with Steel Split Retainer Rings. Available in single, double, triple arch and filled arch models with optional stainless steel backing rings and custom bolt hole drilling.",
+    image: "/products/Rubber-Expansion-Bellow-SRR-Type.jpg",
+    detailImage: "/products/Rubber-Expansion-Bellow-SRR-Type-Detail.jpg",
+    features: [
+      "Robust design with integral rubber flanges",
+      "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+      "Moves in both axial and lateral offset directions",
+      "Single, double, triple arch & filled arch models available",
+      "304 or 316 stainless steel flange backing rings available",
+      "Special bolt hole drilling available",
+      "Non-standard designs manufactured as required",
+    ],
+  },
+  {
+    slug: "ffr-type-rubber-expansion-bellow",
+    title: "FFR Type – Rubber Expansion Bellow",
+    subtitle: "Integral Full Face Rubber Flanges",
+    size: "DN 25 to 3000 mm",
+    temperature: "Up to 120°C",
+    description:
+      "Rubber Expansion Bellow with integral full face rubber flanges. Designed for complete face-to-face sealing across the flange bore, ideal for large pipelines requiring comprehensive sealing and flexibility.",
+    image: "/products/FFR-1500-NB-Type-Bellow.jpg",
+    detailImage: "/products/FFR-1500-NB-Type-Bellow-Detail.jpg",
+    features: [
+      "Robust design with integral full face rubber flanges",
+      "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+      "Moves in both axial and lateral offset directions",
+      "Single, double, triple arch & filled arch models available",
+      "Special bolt hole drilling available",
+      "Non-standard designs manufactured as required",
+    ],
+  },
+  {
+    slug: "concentric-eccentric-srr-type",
+    title: "Concentric & Eccentric SRR Type",
+    subtitle: "Reducer Expansion Joint with Steel Split Retainer Rings",
+    size: "DN 50 to 450 mm",
+    temperature: "Up to 120°C",
+    description:
+      "Rubber Expansion Joint with integral rubber flanges and Steel Split Retainer Rings for reducer applications. Provides an expansion joint and reduces to accommodate a pipe size change — ideal for flexible pump connectors where pipe size changes at the equipment.",
+    image: "/products/Rubber-Expansion-Bellow-SRR-Type.jpg",
+    detailImage: "/products/Rubber-Expansion-Bellow-SRR-Type-Detail.jpg",
+    features: [
+      "Robust design with integral rubber flanges",
+      "Reduces to accommodate a pipe size change",
+      "Ideal for pump connections requiring a size change",
+      "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+      "Axial and lateral offset movement",
+      "Control units are optional",
+      "304 or 316 stainless steel flange backing rings available",
+      "Non-standard designs manufactured as required",
+    ],
+  },
+  {
+    slug: "rf-type-rubber-expansion-joint",
+    title: "RF Type – Rubber Expansion Joint",
+    subtitle: "Rotating Metal Flanges (Swivel Flanges)",
+    size: "DN 25 to 900 mm",
+    temperature: "Up to 120°C",
+    description:
+      "Rubber Expansion Joint with freely rotating metal swivel flanges for economical, easy installation. Flanges rotate to align bolt holes without twisting the bellows body.",
+    image: "/products/RF-Type-Bellow-with-Swivel-Flanges-Welded-Stretcher-Plates.jpg",
+    detailImage: "/products/RF-Type-Bellow-with-Swivel-Flanges-Welded-Stretcher-Plates-Detail.jpg",
+    features: [
+      "Economical and easy installation",
+      "Flanges rotate freely for bolt hole alignment",
+      "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+      "304 or 316 stainless steel flanges available",
+      "Special bolt hole drilling available",
+      "Non-standard designs manufactured as required",
+    ],
+  },
+  {
+    slug: "rfcu-type-rubber-expansion-joint",
+    title: "RFCU Type – Rubber Expansion Joint",
+    subtitle: "Rotating Metal Flanges with Tie Rod Assembly & Control Unit Plates",
+    size: "DN 25 to 900 mm",
+    temperature: "Up to 120°C",
+    description:
+      "Rubber Expansion Joint with rotating metal swivel flanges, supplied with Tie Rod Assembly and Control Unit Plates. Control Unit Plates are either welded to the flanges or supplied loose for maximum installation flexibility.",
+    image: "/products/RF-Type-Bellow-with-Swivel-Flanges-Welded-Stretcher-Plates.jpg",
+    detailImage: "/products/RF-Type-Bellow-with-Swivel-Flanges-Welded-Stretcher-Plates-Detail.jpg",
+    features: [
+      "Economical and easy installation",
+      "Flanges rotate freely for bolt hole alignment",
+      "Control Unit Plates welded or supplied loose",
+      "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+      "304 or 316 stainless steel flanges available",
+      "Special bolt hole drilling available",
+      "Non-standard designs manufactured as required",
+    ],
+  },
+  {
+    slug: "spool-type-rubber-expansion-bellow",
+    title: "Spool Type – Rubber Expansion Bellow",
+    subtitle: "Rubber Pipe Connector (No Arch)",
+    size: "DN 25 to 900 mm",
+    temperature: "Up to 120°C",
+    description:
+      "Rubber Pipe Connector with no arch profile. Designed to suppress noise and vibration from pumps, chillers and other mechanical equipment. Flexible, easy to install and available in a wide range of elastomers.",
+    image: "/products/Rubber-Expansion-Joints-SE-Type.jpg",
+    detailImage: "/products/Rubber-Expansion-Joints-SE-Type-Detail.jpg",
+    features: [
+      "No arch — smooth rubber pipe connector profile",
+      "Suppresses noise and vibration from pumps and chillers",
+      "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+      "Special bolt hole drilling available",
+      "Non-standard designs manufactured as required",
+    ],
+  },
+  {
+    slug: "clamp-type-multi-arch",
+    title: "Clamp Type Multi Arch – Rubber Expansion Bellow",
+    subtitle: "Multiple Arcs with Sleeve Ends for Clamp Fixing",
+    size: "DN 25 to 1200 mm",
+    temperature: "—",
+    description:
+      "Multi-arch rubber expansion bellow with sleeve ends that clamp directly over pipes. Widely used on vibrating screens to suppress vibration transfer to adjoining structures and act as a dust-tight enclosure preventing spillage of powders, granules or aggregates.",
+    image: "/products/Clamp-Type-Bellow-Multiple-Arcs.jpeg",
+    detailImage: "/products/Clamp-Type-Bellow-Multiple-Arcs-detail.jpeg",
+    features: [
+      "Multiple arcs for maximum movement compensation",
+      "Sleeve ends clamp directly over pipes",
+      "Fabric reinforcement construction",
+      "SS316 Vacuum Support Rings available",
+      "Used on vibrating screens and bulk material systems",
+      "Acts as a dust-tight enclosure",
+      "Available in Silicon, EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+    ],
+  },
+  {
+    slug: "clamp-type-single-arch",
+    title: "Clamp Type Single Arch – Rubber Expansion Bellow",
+    subtitle: "Single Arc with Sleeve Ends for Clamp Fixing",
+    size: "DN 25 to 1200 mm",
+    temperature: "—",
+    description:
+      "Single-arch rubber expansion bellow with sleeve ends that clamp directly over pipes. Economical and simple to install, ideal for standard vibration isolation and movement compensation requirements.",
+    image: "/products/Clamp-Type-Bellow-Single-Arc.jpeg",
+    detailImage: "/products/Clamp-Type-Bellow-Single-Arc-detail.jpeg",
+    features: [
+      "Single arch — economical and easy to install",
+      "Sleeve ends clamp directly over pipes",
+      "Fabric reinforcement construction",
+      "Available in Silicon, EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+    ],
+  },
+  {
+    slug: "bus-duct-rubber-bellow-rectangular",
+    title: "Bus Duct Rubber Bellow – Rectangular",
+    subtitle: "For Electrical Distribution and Transformer Applications",
+    size: "Lengths up to 3000 mm",
+    temperature: "—",
+    description:
+      "Rectangular rubber bellow designed for electrical bus duct and transformer installations. Maintains electrical safety and insulation integrity while accommodating thermal expansion and vibration. Available with or without backup metal split retainer flanges.",
+    image: "/products/Rectangular-Bus-Duct-Bellow-2-Arcs.jpeg",
+    detailImage: "/products/Rectangular-Bus-Duct-Bellow-2-Arcs-detail.jpeg",
+    features: [
+      "Designed for electrical bus duct and transformer applications",
+      "Maintains electrical safety and insulation integrity",
+      "Single, double & no arch configurations with fabric reinforcement",
+      "Backup flanges (metal split retainer rings) are optional",
+      "Available in EPDM & Neoprene elastomers",
+    ],
+  },
+  {
+    slug: "bus-duct-rubber-bellow-round",
+    title: "Rubber Bus Duct Bellow – Round",
+    subtitle: "For Electrical Distribution and Transformer Applications",
+    size: "OD up to 3000 mm diameter",
+    temperature: "—",
+    description:
+      "Round rubber bellow for bus duct and transformer electrical distribution systems. Maintains insulation integrity and accommodates thermal movement and vibration. Available with or without backup metal split retainer flanges.",
+    image: "/products/Bus-Duct-Bellow-with-Split-Retainer-Rings.jpg",
+    detailImage: "/products/Bus-Duct-Bellow-with-Split-Retainer-Rings-Detail.jpg",
+    features: [
+      "Designed for electrical bus duct and transformer applications",
+      "Maintains electrical safety and insulation integrity",
+      "Single, double & no arch configurations with fabric reinforcement",
+      "Backup flanges (metal split retainer rings) are optional",
+      "Available in EPDM & Neoprene elastomers",
+    ],
+  },
+  {
+    slug: "se-type-rubber-expansion-joint",
+    title: "SE Type – Rubber Expansion Joint",
+    subtitle: "Supplied Without Flanges (Flanges in Buyer's Scope)",
+    size: "DN 25 to 900 mm",
+    temperature: "Up to 120°C",
+    description:
+      "Rubber Expansion Joint supplied without metal flanges — the buyer provides or reuses their own existing metal flanges. Economical option for replacements where the original flanges are still serviceable.",
+    image: "/products/Rubber-Expansion-Joints-SE-Type.jpg",
+    detailImage: "/products/Rubber-Expansion-Joints-SE-Type-Detail.jpg",
+    features: [
+      "Metal / steel flanges in the buyer's scope",
+      "Reuse existing flanges from old or worn-out bellows",
+      "Economical and easy installation",
+      "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
+      "304 or 316 stainless steel flanges available",
+      "Special bolt hole drilling available",
+      "Non-standard designs manufactured as required",
+    ],
+  },
+];
+
+// ─── Legacy Product Catalog (kept as reference — not rendered) ───────────────
+export const PRODUCTS_CATALOG_LEGACY = [
   {
     slug: "se-type-rubber-expansion-joints",
     title: "Rubber Expansion Joints SE Type",
@@ -231,21 +474,21 @@ export const APPLICATIONS = [
 
 export const USPS = [
   {
-    title: "Hand-Built Precision",
+    title: "Hand Built Precision",
     description:
-      "Every bellow is hand-constructed with reinforced steel and fabric layers — no shortcuts. Built for heavy-duty industrial applications where failure is not an option.",
+      "Every bellows is handcrafted layer by layer using rubber, fabric, and steel reinforcements. This meticulous process ensures superior quality, reliability, and long-term performance.",
     icon: "wrench",
   },
   {
-    title: "Extra-Large Custom Sizes",
+    title: "Extra Large Custom Sizes",
     description:
-      "We engineer bellows for the biggest pipelines and plant installations. Custom designs tailored to your exact specifications — delivered on time.",
+      "We manufacture custom bellows for large pipelines, ducts, and industrial systems of any size. Built to your exact specifications, every unit is delivered to match your project requirements.",
     icon: "ruler",
   },
   {
     title: "50 Years of Technical Expertise",
     description:
-      "Our team provides full technical support from identification to design. Prompt after-sales service backed by half a century of industry knowledge.",
+      "With over 50 years of experience, we help clients choose the right bellows for every application. From design guidance to after-sales support, our expertise stays with you at every step.",
     icon: "tool",
   },
 ];
@@ -254,7 +497,6 @@ export const CHECKLIST_ITEMS = [
   "On-time deliveries guaranteed",
   "Prompt after-sales support",
   "Technical consultation included",
-  "ISO-compliant manufacturing",
   "Export-ready packaging for global shipments",
 ];
 
@@ -263,44 +505,56 @@ export const MANUFACTURING_PROCESS = [
     step: 1,
     title: "Engineering & Design",
     description:
-      "Detailed CAD modeling and stress analysis of expansion joints.",
+      "Every build starts on paper, not on the shop floor. We study your application — pressure class, movement range, media, and installation constraints — before a single material is touched.",
     details: [
-      "Finite Element Analysis",
-      "Custom formulations",
-      "Client specs alignment",
+      "Type approval with dimensional accuracy",
+      "Finite Element Analysis for critical applications",
+      "Full alignment with client specs and drawings",
     ],
   },
   {
     step: 2,
     title: "Material Selection",
-    description: "Sourcing premium polymers and steel reinforcements.",
+    description:
+      "The compound is chosen for what the bellows will actually face, not for what is convenient. Wrong material at this stage means failure in the field.",
     details: [
-      "High-grade EPDM/Neoprene",
-      "Steel wire reinforcements",
-      "Batch testing",
+      "EPDM, Neoprene, or Nitrile based on service condition",
+      "High tensile steel wire / Rods reinforcements",
+      "Incoming batch testing before production release",
     ],
   },
   {
     step: 3,
     title: "Hand-Building Process",
-    description: "Meticulous layer-by-layer hand construction.",
+    description:
+      "No molds. No machines forming the shape. Our craftsmen build each bellows by hand, layer by layer. This is where the reliability is actually made.",
     details: [
-      "Artisan precision",
-      "Multi-ply fabric wrapping",
-      "Zero-defect tolerance",
+      "Ply by ply fabric wrapping under controlled tension",
+      "Rubber compound applied at precise thickness between layers",
+      "Steel wire / rods wound at exact pitch for rated pressure",
     ],
   },
   {
     step: 4,
     title: "Vulcanization",
-    description: "Thermal bonding under extreme pressure.",
-    details: ["Uniform heat distribution", "Structural lock", "Curing cycles"],
+    description:
+      "Heat and pressure bond every layer into one unified structure. The curing cycle is set specifically for each compound and wall thickness — not a general setting applied to everything.",
+    details: [
+      "Controlled temperature and pressure cycles",
+      "Full-body uniform heat distribution",
+      "Each run monitored and logged",
+    ],
   },
   {
     step: 5,
     title: "Quality Assurance",
-    description: "Rigorous pressure testing before dispatch.",
-    details: ["Hydrostatic testing", "Dimensional checks", "Certification"],
+    description:
+      "Testing is not a formality here. Every bellows is tested, dimensionally verified, and documented before it moves toward dispatch.",
+    details: [
+      "Hydrostatic and Vacuum testing at multiples of working pressure",
+      "Dimensional checks against original drawing",
+      "Test certificates and documentation for every order",
+    ],
   },
 ];
 
