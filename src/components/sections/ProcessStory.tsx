@@ -49,7 +49,7 @@ export default function ProcessStory() {
                       initial={{ opacity: 0, x: isEven ? -50 : 50 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true, margin: "-100px" }}
-                      className={`bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden ${isEven ? 'md:rounded-tr-none' : 'md:rounded-tl-none'}`}
+                      className={`bg-white p-8 md:p-10 md:pl-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden ${isEven ? 'md:rounded-tr-none' : 'md:rounded-tl-none'}`}
                     >
                       {/* Accent Edge */}
                       <div className={`absolute top-0 bottom-0 ${isEven ? 'right-0' : 'left-0'} w-1.5 bg-primary/20 group-hover:bg-primary transition-colors duration-300`}></div>
@@ -61,7 +61,7 @@ export default function ProcessStory() {
                       <h3 className="text-2xl md:text-3xl font-extrabold text-text-primary mb-4 tracking-tight">
                         {step.title}
                       </h3>
-                      <p className="text-slate-600 text-base leading-relaxed mb-8">
+                      <p className="text-slate-600 text-justify text-base leading-relaxed mb-8">
                         {step.description}
                       </p>
 
