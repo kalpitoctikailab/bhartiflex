@@ -23,10 +23,11 @@ export default function AboutPage() {
           work.
         </p>
       </div>
-      <Stats />
-      <TrustBar />
+      
       <ProcessStory />
       <WhyBhartiflex />
+      <Stats />
+      <TrustBar />
       <Testimonials />
     </main>
   );

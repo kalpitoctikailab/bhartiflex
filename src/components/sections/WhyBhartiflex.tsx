@@ -13,7 +13,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function WhyBhartiflex() {
   return (
-    <section className="py-24 bg-white relative border-y border-slate-200">
+    <section id="why-choose-us" className="py-24 bg-white relative border-y border-slate-200">
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
@@ -46,7 +46,7 @@ export default function WhyBhartiflex() {
                   variants={fadeInUp}
                   className="glass-panel p-6 flex flex-col gap-4 group"
                 >
-                  <div className="w-12 h-12 bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-all duration-300">
+                  <div className="w-12 h-12 bg-brand-gradient flex items-center justify-center text-white group-hover:scale-110 transition-all duration-300">
                     {iconMap[usp.icon]}
                   </div>
                   <h4 className="text-lg font-bold text-text-primary leading-snug">{usp.title}</h4>

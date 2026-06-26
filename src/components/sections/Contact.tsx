@@ -231,7 +231,7 @@ export default function Contact() {
                 <button 
                   type="submit"
                   disabled={!canSubmit || isSubmitting}
-                  className="w-full py-4 bg-primary hover:bg-primary/90 disabled:bg-primary/60 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                  className="w-full py-4 bg-brand-gradient hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group shadow-md hover:shadow-lg hover:-translate-y-0.5"
                 >
                   {isSubmitting ? "Sending..." : "Send Inquiry"}
                   <Send

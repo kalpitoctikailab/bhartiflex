@@ -8,9 +8,11 @@ import { useMemo, useState } from "react";
 interface ProductEnquiryProps {
   productTitle: string;
   productSlug: string;
+  selectedDnSize?: string;
+  onDnSizeChange?: (size: string) => void;
 }
 
-export default function ProductEnquiry({ productTitle, productSlug }: ProductEnquiryProps) {
+export default function ProductEnquiry({ productTitle, productSlug, selectedDnSize, onDnSizeChange }: ProductEnquiryProps) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -40,7 +42,7 @@ export default function ProductEnquiry({ productTitle, productSlug }: ProductEnq
           email,
           requirements: [
             `Product: ${productTitle} (${productSlug})`,
-            dnSize ? `DN Size: ${dnSize}` : null,
+            (selectedDnSize ?? dnSize) ? `DN Size: ${selectedDnSize ?? dnSize}` : null,
             faceToFaceLength.trim() ? `Face-to-Face Length: ${faceToFaceLength.trim()} mm` : null,
             requirements.trim() ? `Requirements: ${requirements.trim()}` : null,
           ]
@@ -223,8 +225,12 @@ export default function ProductEnquiry({ productTitle, productSlug }: ProductEnq
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-slate-600">DN Size</label>
                     <select
-                      value={dnSize}
-                      onChange={(e) => setDnSize(e.target.value)}
+                      value={selectedDnSize !== undefined ? selectedDnSize : dnSize}
+                      onChange={(e) => {
+                        const val = e.target.value;
+                        if (onDnSizeChange) onDnSizeChange(val);
+                        else setDnSize(val);
+                      }}
                       className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                     >
                       <option value="">Select DN Size</option>
@@ -260,7 +266,7 @@ export default function ProductEnquiry({ productTitle, productSlug }: ProductEnq
                 <button 
                   type="submit"
                   disabled={!canSubmit || isSubmitting}
-                  className="w-full py-4 bg-primary hover:bg-primary/90 disabled:bg-primary/60 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                  className="w-full py-4 bg-brand-gradient hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group shadow-md hover:shadow-lg hover:-translate-y-0.5"
                 >
                   {isSubmitting ? "Sending..." : "Send Inquiry"}
                   <Send

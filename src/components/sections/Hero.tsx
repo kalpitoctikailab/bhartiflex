@@ -12,7 +12,7 @@ const HERO_COLLAGE = {
     alt: "Rubber expansion bellows with flange connections",
   },
   front: {
-    src: "/HeroBanner-2.jpeg",
+    src: "/Herobanner-2.jpg",
     alt: "Industrial rubber expansion joint detail",
   },
 } as const;
@@ -42,7 +42,7 @@ export default function Hero() {
         >
           {/* Accent Label Tag */}
           <div className="flex items-center gap-2 mb-6">
-            <span className="w-8 h-[2px] bg-primary"></span>
+            <span className="w-8 h-[2px] bg-brand-gradient"></span>
             <span className="text-primary font-bold text-xs uppercase tracking-[0.25em]">
               Precision Engineering Since 1974
             </span>
@@ -54,7 +54,7 @@ export default function Hero() {
             <br />
             <span className="text-primary">Piping </span>
             <br />
-            Solutions.
+            Solutions..
           </h1>
 
           {/* Sub-copy */}
@@ -66,7 +66,7 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-4">
             <Link
               href="/contact"
-              className="group flex items-center gap-3 px-8 py-4 bg-primary hover:bg-primary-dark text-white font-bold text-sm uppercase tracking-widest transition-all duration-300"
+              className="group flex items-center gap-3 px-8 py-4 bg-brand-gradient hover:opacity-90 text-white font-bold text-sm uppercase tracking-widest transition-all duration-300"
             >
               GET A QUOTE
               <ArrowRight

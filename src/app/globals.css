@@ -4,6 +4,7 @@
   /* === Industrial Bold Palette === */
   --color-primary: #E8460A;          /* Industrial Orange */
   --color-primary-dark: #C23908;     /* Darker orange for hover */
+  --color-primary-end: #E31E24;      /* Gradient end — deep red */
   --color-secondary: #FFB800;        /* Construction Yellow – accent alternate */
   --color-highlight: #F97316;        /* Warm orange highlight */
   --color-background: #FFFFFF;
@@ -38,6 +39,37 @@
 }
 
 @layer utilities {
+  /* text-primary on plain text elements → gradient */
+  .text-primary {
+    background: linear-gradient(135deg, #E8460A 0%, #E31E24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Fallback color for contexts where gradient clip doesn't apply */
+    color: #E8460A;
+  }
+
+  /* SVG icons (Lucide) use currentColor via stroke — gradient breaks them.
+     Explicitly re-set color to solid orange when text-primary is on an svg or
+     is the direct parent of an svg so currentColor resolves correctly. */
+  svg.text-primary {
+    -webkit-text-fill-color: #E8460A;
+    background: none;
+    color: #E8460A;
+  }
+
+  /* When a Lucide icon component sits directly inside a .text-primary container,
+     the svg inherits transparent currentColor. Override it. */
+  .text-primary > svg {
+    -webkit-text-fill-color: #E8460A;
+    color: #E8460A;
+  }
+
+  /* Dedicated icon utility — use this class on icon wrappers instead of text-primary */
+  .icon-primary {
+    color: #E8460A;
+  }
+
   .glass-panel {
     @apply bg-white border border-slate-200 shadow-sm rounded-2xl;
   }
@@ -47,7 +79,40 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-linear-to-r from-primary to-highlight;
+    background: linear-gradient(135deg, #E8460A 0%, #E31E24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Primary gradient — orange #E8460A → red #E31E24 */
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, #E8460A 0%, #E31E24 100%);
+  }
+
+  .bg-brand-gradient-hover:hover {
+    background: linear-gradient(135deg, #C23908 0%, #b81a1f 100%);
+  }
+
+  .border-brand-gradient {
+    border-image: linear-gradient(135deg, #E8460A, #E31E24) 1;
+  }
+
+  .text-brand-gradient {
+    background: linear-gradient(135deg, #E8460A 0%, #E31E24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Marquee scroll animation */
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
   }
 
   /* Industrial divider – slanted bottom edge */
@@ -65,11 +130,20 @@
 
   /* Orange accent tag / pill used for section labels */
   .label-tag {
-    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary;
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest;
+    background: linear-gradient(135deg, #E8460A 0%, #E31E24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #E8460A;
   }
 
   .label-tag::before {
     content: "//";
-    @apply text-primary/60;
+    opacity: 0.6;
+    background: linear-gradient(135deg, #E8460A 0%, #E31E24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

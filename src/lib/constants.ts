@@ -1,3 +1,5 @@
+import Hero from "@/components/sections/Hero";
+
 export const COMPANY_DETAILS = {
   name: "SHROFF PROCESS PRODUCTS",
   parent: "SHROFF PROCESS PRODUCTS",
@@ -21,6 +23,8 @@ export const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Products", href: "/products" },
+  { name: "The Anatomy of Excellence", href: "/about#our-process", footerOnly: true },
+  { name: "Why Choose Us", href: "/about#why-choose-us", footerOnly: true },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -60,8 +64,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with integral rubber flanges, supplied with Steel Split Retainer Rings, Control Unit Plates and Tie Rod Assembly. Engineered for systems requiring movement compensation in axial and lateral offset directions.",
-    image: "/products/1500-NB-CU-Type.jpg",
-    detailImage: "/products/1500-NB-CU-Type-Bellow-Detail.jpg",
+    image: "/product-images/CU Type.jpg",
+    detailImage: "/product-images/CU Type.jpg",
     features: [
       "Robust design with integral rubber flanges",
       "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
@@ -78,8 +82,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with integral rubber flanges, supplied with Steel Split Retainer Rings. Available in single, double, triple arch and filled arch models with optional stainless steel backing rings and custom bolt hole drilling.",
-    image: "/products/Rubber-Expansion-Bellow-SRR-Type.jpg",
-    detailImage: "/products/Rubber-Expansion-Bellow-SRR-Type-Detail.jpg",
+    image: "/product-images/SRR Type.jpg",
+    detailImage: "/product-images/SRR Type.jpg",
     features: [
       "Robust design with integral rubber flanges",
       "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
@@ -98,8 +102,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Bellow with integral full face rubber flanges. Designed for complete face-to-face sealing across the flange bore, ideal for large pipelines requiring comprehensive sealing and flexibility.",
-    image: "/products/FFR-1500-NB-Type-Bellow.jpg",
-    detailImage: "/products/FFR-1500-NB-Type-Bellow-Detail.jpg",
+    image: "/product-images/FFR Type.jpg",
+    detailImage: "/product-images/FFR Type.jpg",
     features: [
       "Robust design with integral full face rubber flanges",
       "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
@@ -117,8 +121,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with integral rubber flanges and Steel Split Retainer Rings for reducer applications. Provides an expansion joint and reduces to accommodate a pipe size change — ideal for flexible pump connectors where pipe size changes at the equipment.",
-    image: "/products/Rubber-Expansion-Bellow-SRR-Type.jpg",
-    detailImage: "/products/Rubber-Expansion-Bellow-SRR-Type-Detail.jpg",
+    image: "/product-images/Concentric & Eccentric SRR Type.jpg",
+    detailImage: "/product-images/Concentric & Eccentric SRR Type.jpg",
     features: [
       "Robust design with integral rubber flanges",
       "Reduces to accommodate a pipe size change",
@@ -138,8 +142,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with freely rotating metal swivel flanges for economical, easy installation. Flanges rotate to align bolt holes without twisting the bellows body.",
-    image: "/products/RF-Type-Bellow-with-Swivel-Flanges-Welded-Stretcher-Plates.jpg",
-    detailImage: "/products/RF-Type-Bellow-with-Swivel-Flanges-Welded-Stretcher-Plates-Detail.jpg",
+    image: "/product-images/RF Type.jpg",
+    detailImage: "/product-images/RF Type.jpg",
     features: [
       "Economical and easy installation",
       "Flanges rotate freely for bolt hole alignment",
@@ -157,8 +161,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with rotating metal swivel flanges, supplied with Tie Rod Assembly and Control Unit Plates. Control Unit Plates are either welded to the flanges or supplied loose for maximum installation flexibility.",
-    image: "/products/RF-Type-Bellow-with-Swivel-Flanges-Welded-Stretcher-Plates.jpg",
-    detailImage: "/products/RF-Type-Bellow-with-Swivel-Flanges-Welded-Stretcher-Plates-Detail.jpg",
+    image: "/product-images/RFCU Type.jpg",
+    detailImage: "/product-images/RFCU Type.jpg",
     features: [
       "Economical and easy installation",
       "Flanges rotate freely for bolt hole alignment",
@@ -177,8 +181,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Pipe Connector with no arch profile. Designed to suppress noise and vibration from pumps, chillers and other mechanical equipment. Flexible, easy to install and available in a wide range of elastomers.",
-    image: "/products/Rubber-Expansion-Joints-SE-Type.jpg",
-    detailImage: "/products/Rubber-Expansion-Joints-SE-Type-Detail.jpg",
+    image: "/product-images/Spool Type.jpg",
+    detailImage: "/product-images/Spool Type.jpg",
     features: [
       "No arch — smooth rubber pipe connector profile",
       "Suppresses noise and vibration from pumps and chillers",
@@ -195,8 +199,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "—",
     description:
       "Multi-arch rubber expansion bellow with sleeve ends that clamp directly over pipes. Widely used on vibrating screens to suppress vibration transfer to adjoining structures and act as a dust-tight enclosure preventing spillage of powders, granules or aggregates.",
-    image: "/products/Clamp-Type-Bellow-Multiple-Arcs.jpeg",
-    detailImage: "/products/Clamp-Type-Bellow-Multiple-Arcs-detail.jpeg",
+    image: "/product-images/Clamp Type Multi Arch.jpg",
+    detailImage: "/product-images/Clamp Type Multi Arch.jpg",
     features: [
       "Multiple arcs for maximum movement compensation",
       "Sleeve ends clamp directly over pipes",
@@ -215,8 +219,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "—",
     description:
       "Single-arch rubber expansion bellow with sleeve ends that clamp directly over pipes. Economical and simple to install, ideal for standard vibration isolation and movement compensation requirements.",
-    image: "/products/Clamp-Type-Bellow-Single-Arc.jpeg",
-    detailImage: "/products/Clamp-Type-Bellow-Single-Arc-detail.jpeg",
+    image: "/product-images/Clamp Type Single Arch.jpg",
+    detailImage: "/product-images/Clamp Type Single Arch.jpg",
     features: [
       "Single arch — economical and easy to install",
       "Sleeve ends clamp directly over pipes",
@@ -232,8 +236,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "—",
     description:
       "Rectangular rubber bellow designed for electrical bus duct and transformer installations. Maintains electrical safety and insulation integrity while accommodating thermal expansion and vibration. Available with or without backup metal split retainer flanges.",
-    image: "/products/Rectangular-Bus-Duct-Bellow-2-Arcs.jpeg",
-    detailImage: "/products/Rectangular-Bus-Duct-Bellow-2-Arcs-detail.jpeg",
+    image: "/product-images/Bus Duct Rubber Bellow (Rectangular).jpg",
+    detailImage: "/product-images/Bus Duct Rubber Bellow (Rectangular).jpg",
     features: [
       "Designed for electrical bus duct and transformer applications",
       "Maintains electrical safety and insulation integrity",
@@ -250,8 +254,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "—",
     description:
       "Round rubber bellow for bus duct and transformer electrical distribution systems. Maintains insulation integrity and accommodates thermal movement and vibration. Available with or without backup metal split retainer flanges.",
-    image: "/products/Bus-Duct-Bellow-with-Split-Retainer-Rings.jpg",
-    detailImage: "/products/Bus-Duct-Bellow-with-Split-Retainer-Rings-Detail.jpg",
+    image: "/product-images/Bus Duct Rubber Bellow (Round).jpg",
+    detailImage: "/product-images/Bus Duct Rubber Bellow (Round).jpg",
     features: [
       "Designed for electrical bus duct and transformer applications",
       "Maintains electrical safety and insulation integrity",

@@ -88,7 +88,7 @@ export default function GlobalReach() {
                       type: "spring",
                       stiffness: 200,
                     }}
-                    className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 bg-primary rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"
+                    className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 bg-brand-gradient rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"
                   ></motion.div>
 
                   {/* Tooltip */}

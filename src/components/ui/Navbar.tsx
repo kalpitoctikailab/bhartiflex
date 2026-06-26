@@ -1,9 +1,10 @@
-"use client";
+ "use client";
 import { motion } from "framer-motion";
 import { NAV_LINKS, COMPANY_DETAILS } from "@/lib/constants";
 import { useEffect, useState } from "react";
-import { Menu, X, Hexagon, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
@@ -49,26 +50,20 @@ export default function Navbar() {
       )}
       <div className="container relative z-10 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group shrink-0">
-          <Hexagon className="w-8 h-8 text-primary transition-colors duration-300" strokeWidth={1.5} />
-          <span
-            className={clsx(
-              "font-heading font-extrabold tracking-tight transition-colors duration-300",
-              "text-lg sm:text-xl lg:text-2xl",
-              logoTextColor
-            )}
-          >
-            <span className="text-primary">SHROFF</span>{" "}
-            <span className={clsx(useLightNavText ? "text-white/85" : "text-text-secondary")}>
-              PROCESS
-            </span>{" "}
-            <span className={clsx(useLightNavText ? "text-white" : "text-text-primary")}>PRODUCTS</span>
-          </span>
+        <Link href="/" className="flex items-center shrink-0">
+          <Image
+            src={useLightNavText ? "/Bhartiflex Logo_White Color.svg" : "/Bhartiflex Logo_Color.svg"}
+            alt="Bhartiflex"
+            width={160}
+            height={32}
+            className="h-7 w-auto transition-all duration-300"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.filter((link) => !link.footerOnly).map((link) => (
             <Link
               key={link.name}
               href={link.href}
@@ -79,7 +74,7 @@ export default function Navbar() {
               )}
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-gradient transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
         </nav>
@@ -100,7 +95,7 @@ export default function Navbar() {
           </a>
           <Link
             href="/contact"
-            className="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-primary hover:bg-primary-dark rounded-none transition-all duration-300 uppercase tracking-wide group"
+            className="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-brand-gradient hover:bg-brand-gradient-hover rounded-none transition-all duration-300 uppercase tracking-wide group"
           >
             GET IN TOUCH
             <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
@@ -123,7 +118,7 @@ export default function Navbar() {
         className="relative z-10 md:hidden overflow-hidden bg-dark/98 backdrop-blur-xl border-t border-white/10"
       >
         <div className="container py-6 flex flex-col gap-4">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.filter((link) => !link.footerOnly).map((link) => (
             <Link
               key={link.name}
               href={link.href}
@@ -136,7 +131,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="mt-4 text-center px-6 py-3 text-sm font-bold text-white bg-primary uppercase tracking-wide"
+            className="mt-4 text-center px-6 py-3 text-sm font-bold text-white bg-brand-gradient uppercase tracking-wide"
           >
             GET IN TOUCH →
           </Link>

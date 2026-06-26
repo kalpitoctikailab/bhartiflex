@@ -100,7 +100,7 @@ export default function Testimonials() {
               <button
                 key={idx}
                 onClick={() => setActive(idx)}
-                className={`w-2 h-2 rounded-none transition-all duration-300 ${active === idx ? "bg-primary w-6" : "bg-slate-300 hover:bg-slate-400"}`}
+                className={`w-2 h-2 rounded-none transition-all duration-300 ${active === idx ? "bg-brand-gradient w-6" : "bg-slate-300 hover:bg-slate-400"}`}
                 aria-label={`View testimonial ${idx + 1}`}
               />
             ))}

@@ -2,6 +2,7 @@ import { PRODUCTS_CATALOG } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Box } from "lucide-react";
+import ProductMarquee from "@/components/ui/ProductMarquee";
 
 export const metadata = {
   title: "Product Catalog | SHROFF PROCESS PRODUCTS",
@@ -64,6 +65,9 @@ export default function ProductsPage() {
           ))}
         </div>
       </div>
+
+      {/* Product image marquee */}
+      <ProductMarquee />
     </main>
   );
 }

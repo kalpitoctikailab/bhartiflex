@@ -99,7 +99,7 @@ export default function CTASection() {
                 
                 <div className="relative z-10 mb-8">
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 
-                    ${isPrimary ? 'bg-primary text-white shadow-md' : 'bg-slate-50 text-primary border border-slate-100 group-hover:bg-primary/5'}
+                    ${isPrimary ? 'bg-brand-gradient text-white shadow-md' : 'bg-slate-50 text-primary border border-slate-100 group-hover:bg-primary/5'}
                   `}>
                     {cta.icon}
                   </div>

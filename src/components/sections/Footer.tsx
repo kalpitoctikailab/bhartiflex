@@ -1,7 +1,7 @@
 "use client";
 
 import { COMPANY_DETAILS, NAV_LINKS } from "@/lib/constants";
-import { Hexagon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -11,23 +11,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           {/* Brand Col */}
           <div className="lg:col-span-1">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 group mb-6"
-            >
-              <Hexagon
-                className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300"
-                strokeWidth={1.5}
+            <Link href="/" className="inline-flex items-center mb-6">
+              <Image
+                src="/Bhartiflex Logo_White Color.svg"
+                alt="Bhartiflex"
+                width={160}
+                height={32}
+                className="h-8 w-auto"
               />
-              <span className="font-heading font-extrabold text-xl tracking-tight text-white">
-                <span className="text-primary">SHROFF</span>{" "}
-                <span className="text-white/85">PROCESS</span>{" "}
-                <span className="text-white">PRODUCTS</span>
-              </span>
             </Link>
             <p className="text-white/60 mb-6 leading-relaxed">
               Leading manufacturer, supplier & exporter of Rubber Expansion
-              Bellows and Joints.
+              Joints & Bellows.
             </p>
             <p className="font-mono text-sm tracking-wider text-white/45 uppercase">
               Est. {COMPANY_DETAILS.yearFounded}
@@ -47,10 +42,11 @@ export default function Footer() {
                     className="text-white/55 hover:text-white transition-colors inline-block relative group"
                   >
                     {link.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-brand-gradient transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
               ))}
+              
             </ul>
           </div>
 

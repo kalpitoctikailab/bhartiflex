@@ -78,10 +78,10 @@ export default function Applications() {
             >
               {/* Hexagon Wrapper */}
               <div 
-                className="absolute inset-0 bg-white border border-slate-200 transition-colors duration-300 group-hover:bg-primary z-0 shadow-sm group-hover:shadow-md"
-                style={{
-                  clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
-                }}
+                className="absolute inset-0 bg-white border border-slate-200 transition-all duration-300 z-0 shadow-sm group-hover:shadow-md group-hover:border-transparent"
+                style={{clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"}}
+                onMouseEnter={e => (e.currentTarget.style.background = 'linear-gradient(135deg,#E8460A,#E31E24)')}
+                onMouseLeave={e => (e.currentTarget.style.background = '')}
               ></div>
               
               {/* Inner Content */}

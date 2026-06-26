@@ -6,7 +6,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function ProcessStory() {
   return (
-    <section className="bg-surface py-24 pb-32 border-y border-slate-200 overflow-hidden relative">
+    <section id="our-process" className="bg-surface py-24 pb-32 border-y border-slate-200 overflow-hidden relative">
       <div className="container relative z-10">
         
         {/* Header */}
@@ -52,7 +52,12 @@ export default function ProcessStory() {
                       className={`bg-white p-8 md:p-10 md:pl-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden ${isEven ? 'md:rounded-tr-none' : 'md:rounded-tl-none'}`}
                     >
                       {/* Accent Edge */}
-                      <div className={`absolute top-0 bottom-0 ${isEven ? 'right-0' : 'left-0'} w-1.5 bg-primary/20 group-hover:bg-primary transition-colors duration-300`}></div>
+                      <div
+                        className={`absolute top-0 bottom-0 ${isEven ? 'right-0' : 'left-0'} w-1.5 bg-primary/20 transition-all duration-300`}
+                        style={{}}
+                        onMouseEnter={e => (e.currentTarget.style.background = 'linear-gradient(135deg,#E8460A,#E31E24)')}
+                        onMouseLeave={e => (e.currentTarget.style.background = '')}
+                      ></div>
                       
                       <div className={`text-xs font-bold tracking-widest uppercase text-slate-400 mb-4 ${isEven ? 'justify-end' : 'justify-start'} flex`}>
                         Phase 0{index + 1}
