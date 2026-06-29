@@ -27,7 +27,7 @@ export default function ProcessStory() {
             transition={{ delay: 0.1 }}
             className="text-text-secondary text-lg leading-relaxed"
           >
-            Every bellows we produce undergoes a methodical, stringent manufacturing process to ensure absolute reliability in the harshest industrial conditions.
+            Every bellow we produce undergoes a methodical, stringent manufacturing process to ensure absolute reliability in the harshest industrial conditions.
           </motion.p>
         </div>
 

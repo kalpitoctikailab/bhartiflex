@@ -81,7 +81,7 @@ export default function Navbar() {
 
         {/* Phone + CTA */}
         <div className="hidden md:flex items-center gap-4 shrink-0">
-          <a
+          {/* <a
             href={`tel:${COMPANY_DETAILS.phone}`}
             className={clsx(
               "flex items-center gap-2 transition-colors text-sm font-medium",
@@ -92,7 +92,7 @@ export default function Navbar() {
             <span className="text-left text-xs xl:text-sm leading-snug max-w-[min(100vw-12rem,28rem)]">
               {COMPANY_DETAILS.phoneDisplay}
             </span>
-          </a>
+          </a> */}
           <Link
             href="/contact"
             className="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-brand-gradient hover:bg-brand-gradient-hover rounded-none transition-all duration-300 uppercase tracking-wide group"

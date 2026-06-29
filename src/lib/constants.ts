@@ -161,8 +161,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with rotating metal swivel flanges, supplied with Tie Rod Assembly and Control Unit Plates. Control Unit Plates are either welded to the flanges or supplied loose for maximum installation flexibility.",
-    image: "/product-images/RFCU Type.jpg",
-    detailImage: "/product-images/RFCU Type.jpg",
+    image: "/product-images/RFCU-Type.jpg",
+    detailImage: "/product-images/RFCU-Type.jpg",
     features: [
       "Economical and easy installation",
       "Flanges rotate freely for bolt hole alignment",
@@ -181,8 +181,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Pipe Connector with no arch profile. Designed to suppress noise and vibration from pumps, chillers and other mechanical equipment. Flexible, easy to install and available in a wide range of elastomers.",
-    image: "/product-images/Spool Type.jpg",
-    detailImage: "/product-images/Spool Type.jpg",
+    image: "/product-images/Bus Duct Rubber Bellow (Round).jpg",
+    detailImage: "/product-images/Bus Duct Rubber Bellow (Round).jpg",
     features: [
       "No arch — smooth rubber pipe connector profile",
       "Suppresses noise and vibration from pumps and chillers",
@@ -254,8 +254,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "—",
     description:
       "Round rubber bellow for bus duct and transformer electrical distribution systems. Maintains insulation integrity and accommodates thermal movement and vibration. Available with or without backup metal split retainer flanges.",
-    image: "/product-images/Bus Duct Rubber Bellow (Round).jpg",
-    detailImage: "/product-images/Bus Duct Rubber Bellow (Round).jpg",
+    image: "/product-images/Spool Type.jpg",
+    detailImage: "/product-images/Spool Type.jpg",
     features: [
       "Designed for electrical bus duct and transformer applications",
       "Maintains electrical safety and insulation integrity",
