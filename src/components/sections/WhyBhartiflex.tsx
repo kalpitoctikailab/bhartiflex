@@ -62,10 +62,10 @@ export default function WhyBhartiflex() {
               viewport={{ once: true }}
               className="mt-4"
             >
-              <a href="#about" className="inline-flex items-center gap-2 text-primary font-bold hover:text-highlight transition-colors group/link">
+              {/* <a href="#about" className="inline-flex items-center gap-2 text-primary font-bold hover:text-highlight transition-colors group/link">
                 Learn more about our heritage 
                 <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-              </a>
+              </a> */}
             </motion.div>
           </div>
 

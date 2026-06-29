@@ -94,28 +94,56 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="w-full lg:w-[58%] xl:w-[57%] pl-0 lg:pl-4 xl:pl-8"
         >
-          <div className="relative mx-auto w-full min-h-[min(96vw,500px)] sm:min-h-[560px] lg:min-h-[min(76vh,760px)] max-w-[min(100%,680px)] lg:max-w-[min(100%,760px)]">
-            {/* Large card — top / right; width + portrait aspect (not a low wide box) */}
-            <div className="absolute right-0 top-0 sm:top-[2%] z-1 w-[min(82vw,340px)] sm:w-[min(78vw,380px)] lg:w-[min(44vw,440px)] aspect-3/4 max-w-[440px] rounded-[1.75rem] overflow-hidden border border-white/10 bg-dark-2 shadow-2xl shadow-black/40 group">
+          {/* Mobile: Stack vertically */}
+          <div className="flex flex-col gap-6 lg:hidden">
+            {/* Top image on mobile */}
+            <div className="relative w-full aspect-3/4 max-w-sm mx-auto rounded-3xl overflow-hidden border border-white/10 bg-dark-2 shadow-2xl shadow-black/40">
+              <Image
+                src={HERO_COLLAGE.back.src}
+                alt={HERO_COLLAGE.back.alt}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 85vw"
+                priority
+                loading="eager"
+              />
+            </div>
+
+            {/* Bottom image on mobile */}
+            <div className="relative w-full aspect-3/4 max-w-sm mx-auto rounded-3xl overflow-hidden border border-white/10 bg-dark-2 shadow-2xl shadow-black/50">
+              <Image
+                src={HERO_COLLAGE.front.src}
+                alt={HERO_COLLAGE.front.alt}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 85vw"
+              />
+            </div>
+          </div>
+
+          {/* Desktop: Overlapping collage */}
+          <div className="relative hidden lg:block mx-auto w-full min-h-[min(76vh,760px)] max-w-[min(100%,760px)]">
+            {/* Large card — top / right */}
+            <div className="absolute right-0 top-[2%] z-1 w-[min(44vw,440px)] aspect-3/4 max-w-110 rounded-[1.75rem] overflow-hidden border border-white/10 bg-dark-2 shadow-2xl shadow-black/40 group">
               <Image
                 src={HERO_COLLAGE.back.src}
                 alt={HERO_COLLAGE.back.alt}
                 fill
                 className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                sizes="(max-width: 1024px) 85vw, 440px"
+                sizes="440px"
                 priority
                 loading="eager"
               />
             </div>
 
             {/* Smaller card — bottom / left, overlaps back */}
-            <div className="absolute left-0 bottom-0 sm:bottom-[3%] z-3 w-[min(74vw,300px)] sm:w-[min(70vw,320px)] lg:w-[min(36vw,360px)] aspect-3/4 max-w-[360px] rounded-[1.75rem] overflow-hidden border border-white/10 bg-dark-2 shadow-2xl shadow-black/50 group">
+            <div className="absolute left-0 bottom-[3%] z-3 w-[min(36vw,360px)] aspect-3/4 max-w-90 rounded-[1.75rem] overflow-hidden border border-white/10 bg-dark-2 shadow-2xl shadow-black/50 group">
               <Image
                 src={HERO_COLLAGE.front.src}
                 alt={HERO_COLLAGE.front.alt}
                 fill
                 className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                sizes="(max-width: 1024px) 75vw, 360px"
+                sizes="360px"
               />
             </div>
           </div>
