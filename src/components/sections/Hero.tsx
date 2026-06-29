@@ -8,7 +8,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 /** Back = large / top-right; front = smaller / bottom-left overlap (reference collage). */
 const HERO_COLLAGE = {
   back: {
-    src: "/New-HeroBanner-2.jpg",
+    src: "/New-Herobanner-2.jpg",
     alt: "Rubber expansion bellows with flange connections",
   },
   front: {
