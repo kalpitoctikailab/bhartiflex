@@ -1,79 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ComposableMap,
-  Geographies,
-  Geography,
-  Marker,
-} from "react-simple-maps";
+import Image from "next/image";
 
-const GEO_URL =
-  "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
-
-// Each pin has custom leader-line offsets to avoid all overlaps.
-// dx/dy = tip of leader line from dot (SVG map units)
-// anchor = SVG text-anchor at label position
+// Pin positions calculated for World map.svg (1024×724.04)
+// Using approximate lat/lon converted to pixel positions
 interface Pin {
-  coords: [number, number];
+  top: string;
+  left: string;
   label: string;
-  dx: number;
-  dy: number;
-  anchor: "middle" | "start" | "end";
 }
 
 const mapPins: Pin[] = [
-  // ── South Asia (densely packed — fan labels outward) ──
-  // India  → right
-  { coords: [77.0,  20.0], label: "India",       dx:  26, dy:   0, anchor: "start"  },
-  // Nepal  → upper-right (above India label)
-  { coords: [84.1,  28.0], label: "Nepal",        dx:  20, dy: -18, anchor: "start"  },
-  // Bangladesh → far right, well above Nepal line
-  { coords: [90.4,  23.7], label: "Bangladesh",   dx:  26, dy: -22, anchor: "start"  },
-  // Sri Lanka → straight down (90°)
-  { coords: [80.8,   7.9], label: "Sri Lanka",    dx:   0, dy:  24, anchor: "middle" },
+  // Americas
+  { top: "40%", left: "22%", label: "Canada" },        // ~60°N, -96°W
 
-  // ── Southeast Asia ──
-  // Thailand → straight up (90°), clear of Bangladesh
-  { coords: [100.5, 13.7], label: "Thailand",     dx:   0, dy: -24, anchor: "middle" },
-  // Malaysia → right
-  { coords: [109.7,  4.2], label: "Malaysia",     dx:  24, dy:   0, anchor: "start"  },
-  // Singapore → down
-  { coords: [103.8,  1.4], label: "Singapore",    dx:   0, dy:  22, anchor: "middle" },
-  // Indonesia → down-right
-  { coords: [117.0, -5.0], label: "Indonesia",    dx:  22, dy:  16, anchor: "start"  },
-  // Philippines → right
-  { coords: [122.0, 13.0], label: "Philippines",  dx:  24, dy:   0, anchor: "start"  },
+  // Europe  
+  { top: "48%", left: "55%", label: "Europe" },        // ~52°N, 15°E (Germany)
 
-  // ── Middle East (fan carefully) ──
-  // Iran → up (well above the cluster)
-  { coords: [53.7,  32.0], label: "Iran",         dx:   0, dy: -24, anchor: "middle" },
-  // Azerbaijan → upper-left of Iran
-  { coords: [47.7,  40.4], label: "Azerbaijan",   dx: -24, dy: -18, anchor: "end"    },
-  // Kuwait → upper-left diagonal (away from Jordan)
-  { coords: [47.5,  29.5], label: "Kuwait",       dx: -20, dy: -18, anchor: "end"    },
-  // Jordan → straight left (90°), below Kuwait
-  { coords: [36.2,  31.0], label: "Jordan",       dx: -28, dy:   0, anchor: "end"    },
-  // UAE → right
-  { coords: [54.4,  24.5], label: "UAE",          dx:  24, dy:   0, anchor: "start"  },
-  // Qatar → down-right (below UAE)
-  { coords: [51.2,  25.3], label: "Qatar",        dx:  22, dy:  18, anchor: "start"  },
-  // Saudi Arabia → down
-  { coords: [45.0,  24.0], label: "Saudi Arabia", dx:   0, dy:  24, anchor: "middle" },
+  // Middle East & Caucasus
+  { top: "52%", left: "62%", label: "Azerbaijan" },      // ~40°N, 47°E
+  { top: "57.5%", left: "57.5%", label: "Egypt" },           // ~26°N, 30°E
+  { top: "57%", left: "59%", label: "Jordan" },        // ~31°N, 36°E
+  { top: "56%", left: "62%", label: "Kuwait" },        // ~29°N, 47°E
+  { top: "59%", left: "61.5%", label: "Saudi Arabia" },    // ~24°N, 45°E
+  { top: "58%", left: "63%", label: "Qatar" },         // ~25°N, 51°E
+  { top: "58.5%", left: "64%", label: "UAE" },           // ~24°N, 54°E
+  { top: "55%", left: "64%", label: "Iran" },          // ~32°N, 53°E
 
-  // ── Africa ──
-  // Egypt → left
-  { coords: [30.0,  26.0], label: "Egypt",        dx: -20, dy:   0, anchor: "end"    },
-  // Kenya → left
-  { coords: [37.9,   0.0], label: "Kenya",        dx: -24, dy:   0, anchor: "end"    },
-  // Tanzania → down-left
-  { coords: [34.9,  -6.0], label: "Tanzania",     dx: -24, dy:  16, anchor: "end"    },
+  // Africa ✓ CORRECT
+  { top: "67.5%", left: "59.5%", label: "Kenya" },       // ~0°N, 37°E
+  { top: "70%", left: "59%", label: "Tanzania" },        // ~-6°S, 34°E
 
-  // ── Europe ──
-  { coords: [10.0,  51.0], label: "Europe",       dx:   0, dy: -24, anchor: "middle" },
+  // South Asia ✓ ALL CORRECT
+  { top: "59%", left: "70%", label: "India" },           // ~20°N, 77°E
+  { top: "57%", left: "71.5%", label: "Nepal" },         // ~28°N, 84°E
+  { top: "58.5%", left: "73%", label: "Bangladesh" },    // ~23°N, 90°E
+  { top: "64%", left: "71%", label: "Sri Lanka" },       // ~8°N, 80°E
 
-  // ── Americas ──
-  { coords: [-96.0, 60.0], label: "Canada",       dx:   0, dy: -24, anchor: "middle" },
+  // Southeast Asia ✓ ALL CORRECT
+  { top: "63%", left: "76%", label: "Thailand" },        // ~14°N, 100°E
+  { top: "67%", left: "79%", label: "Malaysia" },        // ~4°N, 109°E
+  { top: "67%", left: "76%", label: "Singapore" },       // ~1°N, 103°E
+  { top: "68.5%", left: "81%", label: "Indonesia" },     // ~-5°S, 117°E
+  { top: "62.5%", left: "81%", label: "Philippines" },   // ~13°N, 122°E
 ];
 
 export default function GlobalReach() {
@@ -103,7 +73,7 @@ export default function GlobalReach() {
           </motion.p>
         </div>
 
-        {/* Map */}
+        {/* Map Container */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,77 +81,43 @@ export default function GlobalReach() {
           transition={{ duration: 0.8 }}
           className="relative max-w-5xl mx-auto"
         >
-          <ComposableMap
-            projection="geoNaturalEarth1"
-            projectionConfig={{ scale: 153, center: [10, 10] }}
-            style={{ width: "100%", height: "auto" }}
-          >
-            <Geographies geography={GEO_URL}>
-              {({ geographies }) =>
-                geographies.map((geo) => (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    fill="#E5E7EB"
-                    stroke="#FFFFFF"
-                    strokeWidth={0.4}
-                    style={{
-                      default: { outline: "none" },
-                      hover:   { outline: "none", fill: "#E5E7EB" },
-                      pressed: { outline: "none" },
-                    }}
-                  />
-                ))
-              }
-            </Geographies>
+          {/* World Map SVG */}
+          <div className="relative w-full">
+            <Image
+              src="/World map.svg"
+              alt="World map showing Bhartiflex global presence"
+              width={1024}
+              height={724}
+              className="w-full h-auto opacity-90"
+              priority
+            />
 
+            {/* Pins overlaid on map with hover tooltip */}
             {mapPins.map((pin, i) => (
-              <Marker key={i} coordinates={pin.coords}>
-                {/* Leader line from dot to label */}
-                <line
-                  x1={0}
-                  y1={0}
-                  x2={pin.dx}
-                  y2={pin.dy}
-                  stroke="#E8460A"
-                  strokeWidth={0.7}
-                  strokeDasharray="2 1.5"
-                />
-
-                {/* Dot — rendered on top of line */}
-                <motion.circle
-                  initial={{ scale: 0, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    delay: 0.5 + i * 0.04,
-                    type: "spring",
-                    stiffness: 220,
-                  }}
-                  r={5}
-                  fill="#E8460A"
-                  stroke="#FFFFFF"
-                  strokeWidth={1.5}
-                />
-
-                {/* Country name at tip of leader line */}
-                <text
-                  x={pin.dx + (pin.anchor === "start" ? 2 : pin.anchor === "end" ? -2 : 0)}
-                  y={pin.dy + (pin.dy > 0 ? 5 : pin.dy < 0 ? -3 : 2)}
-                  textAnchor={pin.anchor}
-                  style={{
-                    fontSize: "7px",
-                    fontWeight: 700,
-                    fill: "#0F172A",
-                    fontFamily: "inherit",
-                    pointerEvents: "none",
-                  }}
-                >
+              <motion.div
+                key={i}
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: 0.5 + i * 0.04,
+                  type: "spring",
+                  stiffness: 220,
+                }}
+                className="absolute -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
+                style={{ top: pin.top, left: pin.left }}
+              >
+                {/* Dot */}
+                <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-primary rounded-full border border-white shadow-md group-hover:scale-125 transition-transform" />
+                
+                {/* Hover tooltip */}
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-dark text-white text-xs font-semibold whitespace-nowrap rounded shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                   {pin.label}
-                </text>
-              </Marker>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px w-2 h-2 bg-dark rotate-45" />
+                </div>
+              </motion.div>
             ))}
-          </ComposableMap>
+          </div>
         </motion.div>
 
         {/* Stats row */}
