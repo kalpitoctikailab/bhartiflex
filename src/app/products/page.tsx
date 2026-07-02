@@ -14,7 +14,7 @@ export default function ProductsPage() {
   return (
     <main className="pt-24 min-h-screen bg-slate-50">
       {/* Header */}
-      <div className="bg-white border-b border-slate-200 py-16">
+      <div className=" border-b border-slate-200 py-16">
         <div className="container text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold text-text-primary mb-4">
             Industrial <span className="text-primary">Solutions.</span>

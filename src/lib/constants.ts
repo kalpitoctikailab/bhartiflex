@@ -64,8 +64,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with integral rubber flanges, supplied with Steel Split Retainer Rings, Control Unit Plates and Tie Rod Assembly. Engineered for systems requiring movement compensation in axial and lateral offset directions.",
-    image: "/product-images/CU Type.jpg",
-    detailImage: "/product-images/CU Type.jpg",
+    image: "/product-images/CU Type-New.jpg",
+    detailImage: "/product-images/CU Type-New.jpg",
     features: [
       "Robust design with integral rubber flanges",
       "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
@@ -82,8 +82,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with integral rubber flanges, supplied with Steel Split Retainer Rings. Available in single, double, triple arch and filled arch models with optional stainless steel backing rings and custom bolt hole drilling.",
-    image: "/product-images/SRR Type.jpg",
-    detailImage: "/product-images/SRR Type.jpg",
+    image: "/product-images/SRR Type-New.jpg",
+    detailImage: "/product-images/SRR Type-New.jpg",
     features: [
       "Robust design with integral rubber flanges",
       "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
@@ -102,8 +102,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Bellow with integral full face rubber flanges. Designed for complete face-to-face sealing across the flange bore, ideal for large pipelines requiring comprehensive sealing and flexibility.",
-    image: "/product-images/FFR Type.jpg",
-    detailImage: "/product-images/FFR Type.jpg",
+    image: "/product-images/FFR Type-New.jpg",
+    detailImage: "/product-images/FFR Type-New.jpg",
     features: [
       "Robust design with integral full face rubber flanges",
       "Available in EPDM, Neoprene, Butyl, Nitrile, Natural and other elastomers",
@@ -121,8 +121,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with integral rubber flanges and Steel Split Retainer Rings for reducer applications. Provides an expansion joint and reduces to accommodate a pipe size change — ideal for flexible pump connectors where pipe size changes at the equipment.",
-    image: "/product-images/Concentric & Eccentric SRR Type.jpg",
-    detailImage: "/product-images/Concentric & Eccentric SRR Type.jpg",
+    image: "/product-images/Concentric & Eccentric SRR Type-New.jpg",
+    detailImage: "/product-images/Concentric & Eccentric SRR Type-New.jpg",
     features: [
       "Robust design with integral rubber flanges",
       "Reduces to accommodate a pipe size change",
@@ -142,8 +142,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with freely rotating metal swivel flanges for economical, easy installation. Flanges rotate to align bolt holes without twisting the bellows body.",
-    image: "/product-images/RF Type.jpg",
-    detailImage: "/product-images/RF Type.jpg",
+    image: "/product-images/RF Type-New.jpg",
+    detailImage: "/product-images/RF Type-New.jpg",
     features: [
       "Economical and easy installation",
       "Flanges rotate freely for bolt hole alignment",
@@ -161,8 +161,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint with rotating metal swivel flanges, supplied with Tie Rod Assembly and Control Unit Plates. Control Unit Plates are either welded to the flanges or supplied loose for maximum installation flexibility.",
-    image: "/product-images/RFCU-Type.jpg",
-    detailImage: "/product-images/RFCU-Type.jpg",
+    image: "/product-images/RFCU-Type-New.jpg",
+    detailImage: "/product-images/RFCU-Type-New.jpg",
     features: [
       "Economical and easy installation",
       "Flanges rotate freely for bolt hole alignment",
@@ -181,8 +181,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Pipe Connector with no arch profile. Designed to suppress noise and vibration from pumps, chillers and other mechanical equipment. Flexible, easy to install and available in a wide range of elastomers.",
-    image: "/product-images/Bus Duct Rubber Bellow (Round).jpg",
-    detailImage: "/product-images/Bus Duct Rubber Bellow (Round).jpg",
+    image: "/product-images/Bus Duct Rubber Bellow (Round)-New.jpg",
+    detailImage: "/product-images/Bus Duct Rubber Bellow (Round)-New.jpg",
     features: [
       "No arch — smooth rubber pipe connector profile",
       "Suppresses noise and vibration from pumps and chillers",
@@ -199,8 +199,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "—",
     description:
       "Multi-arch rubber expansion bellow with sleeve ends that clamp directly over pipes. Widely used on vibrating screens to suppress vibration transfer to adjoining structures and act as a dust-tight enclosure preventing spillage of powders, granules or aggregates.",
-    image: "/product-images/Clamp Type Multi Arch.jpg",
-    detailImage: "/product-images/Clamp Type Multi Arch.jpg",
+    image: "/product-images/Clamp Type Multi Arch-New.jpg",
+    detailImage: "/product-images/Clamp Type Multi Arch-New.jpg",
     features: [
       "Multiple arcs for maximum movement compensation",
       "Sleeve ends clamp directly over pipes",
@@ -219,8 +219,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "—",
     description:
       "Single-arch rubber expansion bellow with sleeve ends that clamp directly over pipes. Economical and simple to install, ideal for standard vibration isolation and movement compensation requirements.",
-    image: "/product-images/Clamp Type Single Arch.jpg",
-    detailImage: "/product-images/Clamp Type Single Arch.jpg",
+    image: "/product-images/Clamp Type Single Arch-New.jpg",
+    detailImage: "/product-images/Clamp Type Single Arch-New.jpg",
     features: [
       "Single arch — economical and easy to install",
       "Sleeve ends clamp directly over pipes",
@@ -236,8 +236,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "—",
     description:
       "Rectangular rubber bellow designed for electrical bus duct and transformer installations. Maintains electrical safety and insulation integrity while accommodating thermal expansion and vibration. Available with or without backup metal split retainer flanges.",
-    image: "/product-images/Bus Duct Rubber Bellow (Rectangular).jpg",
-    detailImage: "/product-images/Bus Duct Rubber Bellow (Rectangular).jpg",
+    image: "/product-images/Bus Duct Rubber Bellow (Rectangular)-New.jpg",
+    detailImage: "/product-images/Bus Duct Rubber Bellow (Rectangular)-New.jpg",
     features: [
       "Designed for electrical bus duct and transformer applications",
       "Maintains electrical safety and insulation integrity",
@@ -254,8 +254,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "—",
     description:
       "Round rubber bellow for bus duct and transformer electrical distribution systems. Maintains insulation integrity and accommodates thermal movement and vibration. Available with or without backup metal split retainer flanges.",
-    image: "/product-images/Spool Type.jpg",
-    detailImage: "/product-images/Spool Type.jpg",
+    image: "/product-images/Spool Type-New.jpg",
+    detailImage: "/product-images/Spool Type-New.jpg",
     features: [
       "Designed for electrical bus duct and transformer applications",
       "Maintains electrical safety and insulation integrity",
@@ -600,3 +600,97 @@ export const TESTIMONIALS = [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
 ];
+
+// ─── FAQ Data ────────────────────────────────────────────────────────────────
+
+// General FAQs for Home Page (PLACEHOLDER - Client needs to fill)
+export const HOME_FAQS = [
+  {
+    question: "What products does Shroff Process Products manufacture?",
+    answer: "We manufacture a comprehensive range of hand-built rubber expansion bellows and joints including RF Type, FFR Type, SRR Type, CU Type, RFCU Type, Spool Type, Clamp Type (Single & Multi Arch), and specialized Bus Duct Bellows in both rectangular and round configurations.",
+  },
+  {
+    question: "How long has your company been in business?",
+    answer: "Shroff Process Products was established in 1974 and has over 50 years of experience in manufacturing hand-built rubber expansion joints and bellows for industrial applications.",
+  },
+  {
+    question: "What industries do you serve?",
+    answer: "We serve a wide range of industries including Power Plants, Steel Plants, Chemical Plants, Water Treatment facilities, HVAC systems, Marine, Mining, Pumps, Pipelines, and Utility Piping across 25+ countries.",
+  },
+  {
+    question: "Can you manufacture custom sizes?",
+    answer: "Yes, we specialize in custom manufacturing. We can produce expansion joints from DN 25 up to DN 3000 and even larger for special applications. Every unit is built to your exact specifications.",
+  },
+  {
+    question: "What is your typical lead time?",
+    answer: "Lead times vary based on size and complexity. Standard sizes typically ship within 2-3 weeks, while custom large-diameter joints may require 4-6 weeks. Contact us for specific project timelines.",
+  },
+  {
+    question: "Do you provide technical support?",
+    answer: "Yes, we offer comprehensive technical support including product selection guidance, installation assistance, and after-sales support. Our engineering team is available to help you choose the right solution for your application.",
+  },
+];
+
+// Product-specific FAQs (keyed by product slug)
+export const PRODUCT_FAQS: Record<string, Array<{ question: string; answer: string }>> = {
+  "rf-type-rubber-expansion-joint": [
+    {
+      question: "What are RF Type expansion joints used for?",
+      answer: "RF Type (Raised Face with Rotating Flanges) expansion joints are ideal for applications requiring easy installation and bolt hole alignment. The swivel flanges rotate freely without twisting the bellows body, making them economical and simple to install.",
+    },
+    {
+      question: "What flange standards do you follow for RF Type?",
+      answer: "We manufacture RF Type joints to ANSI, DIN, JIS, and other international flange standards. Custom bolt hole drilling is also available upon request.",
+    },
+    {
+      question: "What materials are available for RF Type?",
+      answer: "RF Type joints are available in EPDM, Neoprene, Butyl, Nitrile, Natural Rubber, and other elastomers. Flanges are available in 304 or 316 stainless steel.",
+    },
+  ],
+  "cu-type-rubber-expansion-joint": [
+    {
+      question: "What is a Control Unit (CU)?",
+      answer: "A Control Unit consists of steel plates and tie rod assemblies that limit excessive movement while allowing controlled axial and lateral offset compensation. They prevent over-extension of the bellows.",
+    },
+    {
+      question: "When should I use CU Type instead of standard expansion joints?",
+      answer: "Use CU Type when your system requires controlled movement limits, protection against excessive thermal expansion, or when you need to prevent bellows over-extension in critical applications.",
+    },
+  ],
+  "srr-type-rubber-expansion-joint": [
+    {
+      question: "What are Steel Split Retainer Rings?",
+      answer: "Steel Split Retainer Rings are metal reinforcement rings that secure the rubber flanges and provide additional structural support. They allow for easier installation and enhanced pressure handling.",
+    },
+    {
+      question: "What arch configurations are available for SRR Type?",
+      answer: "SRR Type joints are available in single arch, double arch, triple arch, and filled arch configurations depending on your movement compensation requirements.",
+    },
+  ],
+  "ffr-type-rubber-expansion-bellow": [
+    {
+      question: "What is the difference between FFR and RF Type?",
+      answer: "FFR (Full Face Rubber Flanges) provide complete face-to-face sealing across the entire flange bore, while RF Type uses raised face flanges. FFR is ideal for large pipelines requiring comprehensive sealing.",
+    },
+  ],
+  "clamp-type-single-arch": [
+    {
+      question: "How do Clamp Type expansion joints install?",
+      answer: "Clamp Type joints have sleeve ends that clamp directly over pipes using hose clamps or band clamps. No flanges required, making them economical and quick to install or replace.",
+    },
+    {
+      question: "What applications are Clamp Type best suited for?",
+      answer: "Clamp Type joints are ideal for vibrating screens, bulk material handling systems, dust-tight enclosures, and any application requiring simple clamped connections without welding or flanging.",
+    },
+  ],
+  "bus-duct-rubber-bellow-rectangular": [
+    {
+      question: "What are Bus Duct Bellows used for?",
+      answer: "Bus Duct Bellows are designed specifically for electrical distribution systems, transformers, and bus duct installations where electrical safety and insulation integrity must be maintained while accommodating thermal expansion and vibration.",
+    },
+    {
+      question: "Are backup flanges required for Bus Duct Bellows?",
+      answer: "Backup flanges (metal split retainer rings) are optional. They provide additional structural support but many installations use the bellows without them depending on the application requirements.",
+    },
+  ],
+};

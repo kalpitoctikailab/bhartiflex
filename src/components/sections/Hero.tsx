@@ -8,11 +8,11 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 /** Back = large / top-right; front = smaller / bottom-left overlap (reference collage). */
 const HERO_COLLAGE = {
   back: {
-    src: "/New-Herobanner-2.jpg",
+    src: "/Herobanner1-dark.jpg",
     alt: "Rubber expansion bellows with flange connections",
   },
   front: {
-    src: "/New-Herobanner-1.jpg",
+    src: "/Herobanner2-dark.jpg",
     alt: "Industrial rubber expansion joint detail",
   },
 } as const;
@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-screen flex flex-col overflow-hidden bg-dark">
       {/* Dark base Background */}
-      <div className="absolute inset-0 bg-dark z-0"></div>
+      <div className="absolute inset-0 bg-[#001B4D] z-0"></div>
       {/* Subtle noise texture overlay */}
       <div
         className="absolute inset-0 opacity-[0.03] z-0"

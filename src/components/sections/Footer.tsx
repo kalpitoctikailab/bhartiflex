@@ -13,11 +13,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center mb-6">
               <Image
-                src="/Bhartiflex Logo_White Color.svg"
+                src="/Bhartiflex-shroff-inline.svg"
                 alt="Bhartiflex"
                 width={160}
                 height={32}
-                className="h-8 w-auto"
+                className="h-17 w-auto"
               />
             </Link>
             <p className="text-white/60 mb-6 leading-relaxed">

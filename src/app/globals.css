@@ -8,11 +8,11 @@
   --color-secondary: #FFB800;        /* Construction Yellow – accent alternate */
   --color-highlight: #F97316;        /* Warm orange highlight */
   --color-background: #FFFFFF;
-  --color-text-primary: #0F172A;
+  --color-text-primary: #001B4D;
   --color-text-secondary: #475569;
   --color-surface: #F5F4F2;          /* Warm off-white */
   --color-surface-hover: #EDEBE8;
-  --color-dark: #111418;             /* Section dark backgrounds */
+  --color-dark: #001B4D;             /* Section dark backgrounds */
   --color-dark-2: #1A1D23;           /* Slightly lighter dark */
 
   /* === Typography === */
@@ -113,6 +113,20 @@
 
   .animate-marquee {
     animation: marquee 40s linear infinite;
+  }
+
+  /* Smooth scrolling animation for trust bar */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
   }
 
   /* Industrial divider – slanted bottom edge */

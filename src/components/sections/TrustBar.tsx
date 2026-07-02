@@ -54,12 +54,8 @@ export default function TrustBar({ labels, eyebrow }: TrustBarProps) {
         </motion.p>
       </div>
 
-      <div className="relative flex">
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ ease: "linear", duration: labels ? 45 : 30, repeat: Infinity }}
-          className="flex gap-6 md:gap-10 items-center px-8 w-max"
-        >
+      <div className="relative overflow-hidden">
+        <div className="flex gap-6 md:gap-10 items-center animate-scroll">
           {labelList
             ? labelList.map((label, index) => (
                 <span
@@ -82,7 +78,7 @@ export default function TrustBar({ labels, eyebrow }: TrustBarProps) {
                   key={`${logo.src}-${index}`}
                   className="flex items-center justify-center opacity-100 transition-all duration-300 group"
                 >
-                  <div className="relative h-14 md:h-16 lg:h-20 w-[220px] md:w-[220px]">
+                  <div className="relative h-14 md:h-16 lg:h-20 w-55 md:w-55">
                     <Image
                       src={logo.src}
                       alt={logo.alt}
@@ -93,11 +89,7 @@ export default function TrustBar({ labels, eyebrow }: TrustBarProps) {
                   </div>
                 </div>
               ))}
-        </motion.div>
-
-        {/* Dark gradient edge masks */}
-        <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-dark to-transparent pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-dark to-transparent pointer-events-none"></div>
+        </div>
       </div>
     </section>
   );
