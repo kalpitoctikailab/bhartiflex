@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { COMPANY_DETAILS } from "@/lib/constants";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const [firstName, setFirstName] = useState("");
@@ -13,11 +14,17 @@ export default function Contact() {
   const [requirements, setRequirements] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<null | { type: "success" | "error"; message: string }>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const canSubmit = useMemo(() => {
     const e = email.trim();
-    return firstName.trim().length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e) && requirements.trim().length > 0;
-  }, [email, firstName, requirements]);
+    return firstName.trim().length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e) && requirements.trim().length > 0 && recaptchaToken !== null;
+  }, [email, firstName, requirements, recaptchaToken]);
+
+  function onRecaptchaChange(token: string | null) {
+    setRecaptchaToken(token);
+  }
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -34,6 +41,7 @@ export default function Contact() {
           email,
           companyName,
           requirements,
+          recaptchaToken,
         }),
       });
       const data = (await res.json()) as { ok: boolean; error?: string };
@@ -46,11 +54,15 @@ export default function Contact() {
       setEmail("");
       setCompanyName("");
       setRequirements("");
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
     } catch (err) {
       setStatus({
         type: "error",
         message: err instanceof Error ? err.message : "Something went wrong. Please try again.",
       });
+      recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
@@ -226,6 +238,15 @@ export default function Contact() {
                     className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
                     placeholder="Describe your operating conditions, temperature, pressure, etc..."
                   ></textarea>
+                </div>
+
+                {/* Google reCAPTCHA */}
+                <div className="flex justify-center">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                    onChange={onRecaptchaChange}
+                  />
                 </div>
 
                 <button 

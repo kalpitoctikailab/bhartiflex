@@ -86,8 +86,16 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center gap-4">
           <p className="text-white/45 text-sm text-center">
-            &copy; {new Date().getFullYear()} Bhartiflex. Part of Shroff Process
-            Pumps.
+            &copy; {new Date().getFullYear()} Bhartiflex. Part of{" "}
+            <a 
+              href="https://www.shroffprocesspumps.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white transition-colors underline"
+            >
+              Shroff Process Pumps
+            </a>
+            .
           </p>
         </div>
       </div>
