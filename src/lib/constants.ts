@@ -23,6 +23,7 @@ export const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Products", href: "/products" },
+  { name: "Blog", href: "/blog" },
   { name: "The Anatomy of Excellence", href: "/about#our-process", footerOnly: true },
   { name: "Why Choose Us", href: "/about#why-choose-us", footerOnly: true },
   { name: "Contact", href: "/contact" },
@@ -603,94 +604,294 @@ export const TESTIMONIALS = [
 
 // ─── FAQ Data ────────────────────────────────────────────────────────────────
 
-// General FAQs for Home Page (PLACEHOLDER - Client needs to fill)
+// General FAQs for Home Page
 export const HOME_FAQS = [
   {
-    question: "What products does Shroff Process Products manufacture?",
-    answer: "We manufacture a comprehensive range of hand-built rubber expansion bellows and joints including RF Type, FFR Type, SRR Type, CU Type, RFCU Type, Spool Type, Clamp Type (Single & Multi Arch), and specialized Bus Duct Bellows in both rectangular and round configurations.",
+    question: "What is a CU Type expansion joint?",
+    answer: "Bhartiflex specializes in hand-built rubber expansion joints and bellows designed for industrial applications requiring flexibility, vibration control, and durability.",
   },
   {
-    question: "How long has your company been in business?",
-    answer: "Shroff Process Products was established in 1974 and has over 50 years of experience in manufacturing hand-built rubber expansion joints and bellows for industrial applications.",
+    question: "How experienced is Bhartiflex in this industry?",
+    answer: "Bhartiflex has over 50 years of experience (established in 1974), delivering engineered solutions trusted by industrial leaders worldwide.",
   },
   {
-    question: "What industries do you serve?",
-    answer: "We serve a wide range of industries including Power Plants, Steel Plants, Chemical Plants, Water Treatment facilities, HVAC systems, Marine, Mining, Pumps, Pipelines, and Utility Piping across 25+ countries.",
+    question: "What makes Bhartiflex products different?",
+    answer: "Each product is hand-built using layered rubber, fabric, and steel reinforcement, ensuring superior strength, reliability, and long service life.",
   },
   {
-    question: "Can you manufacture custom sizes?",
-    answer: "Yes, we specialize in custom manufacturing. We can produce expansion joints from DN 25 up to DN 3000 and even larger for special applications. Every unit is built to your exact specifications.",
+    question: "Does Bhartiflex offer custom solutions?",
+    answer: "Yes, Bhartiflex manufactures fully customized expansion joints and bellows, including extra-large sizes tailored to specific project requirements.",
   },
   {
-    question: "What is your typical lead time?",
-    answer: "Lead times vary based on size and complexity. Standard sizes typically ship within 2-3 weeks, while custom large-diameter joints may require 4-6 weeks. Contact us for specific project timelines.",
-  },
-  {
-    question: "Do you provide technical support?",
-    answer: "Yes, we offer comprehensive technical support including product selection guidance, installation assistance, and after-sales support. Our engineering team is available to help you choose the right solution for your application.",
+    question: "Where does Bhartiflex supply its products?",
+    answer: "Bhartiflex exports to more than 25 countries, serving industries such as power, chemicals, cement, steel, and infrastructure.",
   },
 ];
 
 // Product-specific FAQs (keyed by product slug)
 export const PRODUCT_FAQS: Record<string, Array<{ question: string; answer: string }>> = {
-  "rf-type-rubber-expansion-joint": [
-    {
-      question: "What are RF Type expansion joints used for?",
-      answer: "RF Type (Raised Face with Rotating Flanges) expansion joints are ideal for applications requiring easy installation and bolt hole alignment. The swivel flanges rotate freely without twisting the bellows body, making them economical and simple to install.",
-    },
-    {
-      question: "What flange standards do you follow for RF Type?",
-      answer: "We manufacture RF Type joints to ANSI, DIN, JIS, and other international flange standards. Custom bolt hole drilling is also available upon request.",
-    },
-    {
-      question: "What materials are available for RF Type?",
-      answer: "RF Type joints are available in EPDM, Neoprene, Butyl, Nitrile, Natural Rubber, and other elastomers. Flanges are available in 304 or 316 stainless steel.",
-    },
-  ],
   "cu-type-rubber-expansion-joint": [
     {
-      question: "What is a Control Unit (CU)?",
-      answer: "A Control Unit consists of steel plates and tie rod assemblies that limit excessive movement while allowing controlled axial and lateral offset compensation. They prevent over-extension of the bellows.",
+      question: "What is a CU Type expansion joint?",
+      answer: "It is a rubber expansion joint with integral rubber flanges and a control unit. Tie rods help limit movement and improve safety.",
     },
     {
-      question: "When should I use CU Type instead of standard expansion joints?",
-      answer: "Use CU Type when your system requires controlled movement limits, protection against excessive thermal expansion, or when you need to prevent bellows over-extension in critical applications.",
+      question: "Why are tie rods used in CU Type joints?",
+      answer: "Tie rods control excessive axial movement during operation. They help protect equipment from overextension and pressure thrust.",
+    },
+    {
+      question: "Where is CU Type commonly used?",
+      answer: "It is used in pressurized pipeline systems connected to pumps and compressors. It is ideal where controlled movement is important.",
+    },
+    {
+      question: "What are the benefits of CU Type joints?",
+      answer: "They absorb vibration, reduce noise, and protect connected equipment. They also provide controlled flexibility under pressure.",
+    },
+    {
+      question: "Can CU Type joints be customized?",
+      answer: "Yes, they can be made in different sizes and materials. Tie rod assemblies can also be tailored to the application.",
     },
   ],
   "srr-type-rubber-expansion-joint": [
     {
-      question: "What are Steel Split Retainer Rings?",
-      answer: "Steel Split Retainer Rings are metal reinforcement rings that secure the rubber flanges and provide additional structural support. They allow for easier installation and enhanced pressure handling.",
+      question: "What does SRR stand for?",
+      answer: "SRR stands for Steel Split Retainer Ring. It is used to secure the rubber joint firmly to the pipeline.",
     },
     {
-      question: "What arch configurations are available for SRR Type?",
-      answer: "SRR Type joints are available in single arch, double arch, triple arch, and filled arch configurations depending on your movement compensation requirements.",
+      question: "What is the advantage of split retainer rings?",
+      answer: "They provide strong flange support during operation. They also make installation and maintenance easier.",
+    },
+    {
+      question: "Where are SRR joints typically used?",
+      answer: "They are used in standard industrial piping systems. Common applications include water, chemical, and process plants.",
+    },
+    {
+      question: "Are SRR joints suitable for high pressure?",
+      answer: "Yes, they can handle moderate to high pressure based on design. Proper material and construction selection is important.",
+    },
+    {
+      question: "Can they handle misalignment?",
+      answer: "Yes, they absorb axial, lateral, and angular movements. This helps reduce stress on connected piping.",
     },
   ],
   "ffr-type-rubber-expansion-bellow": [
     {
-      question: "What is the difference between FFR and RF Type?",
-      answer: "FFR (Full Face Rubber Flanges) provide complete face-to-face sealing across the entire flange bore, while RF Type uses raised face flanges. FFR is ideal for large pipelines requiring comprehensive sealing.",
+      question: "What is an FFR type bellow?",
+      answer: "It is a rubber expansion bellow with integral full-face rubber flanges. It offers a reliable sealing surface across the flange face.",
+    },
+    {
+      question: "What is the benefit of full-face flanges?",
+      answer: "Full-face flanges distribute load evenly during tightening. They also improve sealing and reduce leakage risk.",
+    },
+    {
+      question: "Where are FFR types used?",
+      answer: "They are used in fluid handling systems that need leak-resistant connections. These include water, slurry, and chemical lines.",
+    },
+    {
+      question: "Are these suitable for corrosive media?",
+      answer: "Yes, they can be made with suitable rubber compounds for chemical resistance. Material selection depends on the service condition.",
+    },
+    {
+      question: "Do they require additional gaskets?",
+      answer: "In many cases, separate gaskets are not required. The full-face rubber flange itself acts as the sealing surface.",
+    },
+  ],
+  "concentric-eccentric-srr-type": [
+    {
+      question: "What is a reducer expansion joint?",
+      answer: "It is an expansion joint that connects pipes of different diameters. It also allows flexibility and movement absorption.",
+    },
+    {
+      question: "What is the difference between concentric and eccentric types?",
+      answer: "A concentric type keeps the centerline aligned. An eccentric type has an offset centerline for specific flow or layout needs.",
+    },
+    {
+      question: "Where are these used?",
+      answer: "They are commonly used in pump suction and discharge lines. They are also useful where pipe size transitions are required.",
+    },
+    {
+      question: "Do they handle vibration?",
+      answer: "Yes, they absorb vibration and reduce mechanical stress. This helps improve piping system life.",
+    },
+    {
+      question: "Are custom sizes available?",
+      answer: "Yes, these joints can be manufactured to exact pipeline dimensions. Construction can also match operating conditions.",
+    },
+  ],
+  "rf-type-rubber-expansion-joint": [
+    {
+      question: "What are rotating metal flanges?",
+      answer: "These are metal flanges that rotate freely around the joint body. They help align bolt holes during installation.",
+    },
+    {
+      question: "What is the benefit of swivel flanges?",
+      answer: "They make installation faster and easier on site. They also reduce alignment issues in existing pipelines.",
+    },
+    {
+      question: "Where is RF type used?",
+      answer: "It is used where piping alignment is difficult or limited. It is suitable for systems needing installation flexibility.",
+    },
+    {
+      question: "Are they durable?",
+      answer: "Yes, they combine the strength of metal flanges with the flexibility of rubber. This gives reliable performance in industrial service.",
+    },
+    {
+      question: "Can flange materials vary?",
+      answer: "Yes, flange materials can be selected as per project needs. Options may include carbon steel or stainless steel.",
+    },
+  ],
+  "rfcu-type-rubber-expansion-joint": [
+    {
+      question: "What does RFCU include?",
+      answer: "It includes rotating metal flanges with control unit plates and tie rods. This design offers flexibility with movement control.",
+    },
+    {
+      question: "Why combine swivel flanges with control units?",
+      answer: "Swivel flanges simplify installation while control units limit excessive movement. Together they improve both convenience and safety.",
+    },
+    {
+      question: "Where is RFCU used?",
+      answer: "It is used in critical industrial systems with pressure and movement concerns. Typical applications include pumps, compressors, and process lines.",
+    },
+    {
+      question: "Does it prevent overextension?",
+      answer: "Yes, the tie rod assembly helps prevent overextension. It controls movement caused by pressure thrust or thermal expansion.",
+    },
+    {
+      question: "Is it suitable for heavy-duty applications?",
+      answer: "Yes, it is designed for demanding industrial duties. It is especially useful where both safety and installation flexibility matter.",
+    },
+  ],
+  "spool-type-rubber-expansion-bellow": [
+    {
+      question: "What is a spool type bellow?",
+      answer: "It is a straight rubber connector without an arch. It is mainly used as a flexible pipe connector.",
+    },
+    {
+      question: "Where is it used?",
+      answer: "It is used in compact piping layouts with limited space. It suits applications where only small movement is expected.",
+    },
+    {
+      question: "Does it absorb vibration?",
+      answer: "Yes, it helps absorb vibration and minor movement. However, it is less flexible than arch-type bellows.",
+    },
+    {
+      question: "What are its advantages?",
+      answer: "It has a simple and compact design. It is also easy to install and maintain.",
+    },
+    {
+      question: "Can it handle pressure?",
+      answer: "Yes, it can handle pressure when designed correctly. Material and wall construction depend on service requirements.",
+    },
+  ],
+  "clamp-type-multi-arch": [
+    {
+      question: "What is a multi-arch design?",
+      answer: "A multi-arch design has multiple convolutions in the rubber body. This provides greater flexibility and movement absorption.",
+    },
+    {
+      question: "How is it installed?",
+      answer: "It is installed using clamps over sleeve ends. This allows simple fixing without conventional flanges.",
+    },
+    {
+      question: "Where is it used?",
+      answer: "It is used in ducts, HVAC systems, and low-pressure lines. It is suitable where large movement needs to be absorbed.",
+    },
+    {
+      question: "What is the benefit of multiple arches?",
+      answer: "Multiple arches allow greater axial and lateral movement. They also reduce stress on connected systems.",
+    },
+    {
+      question: "Is it easy to maintain?",
+      answer: "Yes, the clamp-type design allows quick removal and replacement. This helps reduce maintenance time.",
     },
   ],
   "clamp-type-single-arch": [
     {
-      question: "How do Clamp Type expansion joints install?",
-      answer: "Clamp Type joints have sleeve ends that clamp directly over pipes using hose clamps or band clamps. No flanges required, making them economical and quick to install or replace.",
+      question: "What is a single arch bellow?",
+      answer: "It is a rubber bellow with one convolution or arch. It is designed for moderate flexibility and vibration absorption.",
     },
     {
-      question: "What applications are Clamp Type best suited for?",
-      answer: "Clamp Type joints are ideal for vibrating screens, bulk material handling systems, dust-tight enclosures, and any application requiring simple clamped connections without welding or flanging.",
+      question: "Where is it suitable?",
+      answer: "It is suitable for systems with limited space and moderate movement. It is commonly used in utility and ducting applications.",
+    },
+    {
+      question: "How is it installed?",
+      answer: "It is fixed using clamps on sleeve ends. This makes installation simple and practical.",
+    },
+    {
+      question: "What are its benefits?",
+      answer: "It offers a compact, cost-effective, and reliable solution. It also helps isolate vibration in connected equipment.",
+    },
+    {
+      question: "Can it handle vibration?",
+      answer: "Yes, it effectively absorbs vibration and reduces transmitted noise. This improves overall system performance.",
     },
   ],
   "bus-duct-rubber-bellow-rectangular": [
     {
-      question: "What are Bus Duct Bellows used for?",
-      answer: "Bus Duct Bellows are designed specifically for electrical distribution systems, transformers, and bus duct installations where electrical safety and insulation integrity must be maintained while accommodating thermal expansion and vibration.",
+      question: "What is a rectangular bus duct bellow?",
+      answer: "It is a flexible rubber connector for rectangular bus duct systems. It is used in electrical distribution and transformer applications.",
     },
     {
-      question: "Are backup flanges required for Bus Duct Bellows?",
-      answer: "Backup flanges (metal split retainer rings) are optional. They provide additional structural support but many installations use the bellows without them depending on the application requirements.",
+      question: "Where is it used?",
+      answer: "It is used between connected sections of electrical bus ducts. It helps manage vibration and thermal movement.",
+    },
+    {
+      question: "What is its purpose?",
+      answer: "Its purpose is to absorb vibration, expansion, and slight misalignment. This protects connected electrical equipment.",
+    },
+    {
+      question: "Is it electrically insulated?",
+      answer: "Yes, it is designed to support electrical insulation requirements. It also provides flexible sealing in the connection.",
+    },
+    {
+      question: "Can it be customized?",
+      answer: "Yes, it can be manufactured in custom rectangular dimensions. The construction is matched to the system requirement.",
+    },
+  ],
+  "bus-duct-rubber-bellow-round": [
+    {
+      question: "What is a round bus duct bellow?",
+      answer: "It is a flexible connector designed for round bus duct systems. It is used in electrical and transformer connections.",
+    },
+    {
+      question: "Where is it used?",
+      answer: "It is installed between circular bus duct sections or connected equipment. It helps accommodate vibration and movement.",
+    },
+    {
+      question: "What does it protect against?",
+      answer: "It protects against vibration, thermal expansion, and mechanical stress. This helps improve system reliability.",
+    },
+    {
+      question: "Is it durable?",
+      answer: "Yes, it is made using reinforced rubber construction. This ensures dependable performance in industrial conditions.",
+    },
+    {
+      question: "Does it support custom sizing?",
+      answer: "Yes, it can be made in sizes as required by the project. Dimensions and materials are selected to match the application.",
+    },
+  ],
+  "se-type-rubber-expansion-joint": [
+    {
+      question: "What is SE Type?",
+      answer: "SE Type is a rubber expansion joint supplied without flanges. The mating flanges are provided by the buyer.",
+    },
+    {
+      question: "Who provides the flanges?",
+      answer: "The buyer provides the flanges for installation. This allows compatibility with project-specific flange requirements.",
+    },
+    {
+      question: "Where is SE Type used?",
+      answer: "It is used where the customer wants to use their own flanges. It is suitable for flexible integration into existing systems.",
+    },
+    {
+      question: "What are its advantages?",
+      answer: "It offers flexibility in flange selection and may reduce procurement constraints. It is useful for custom installation needs.",
+    },
+    {
+      question: "Can it be customized?",
+      answer: "Yes, it can be customized in size, material, and construction. The joint is built according to the operating condition.",
     },
   ],
 };

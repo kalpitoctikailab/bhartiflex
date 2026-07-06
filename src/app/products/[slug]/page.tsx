@@ -1,10 +1,11 @@
-import { PRODUCTS_CATALOG } from "@/lib/constants";
+import { PRODUCTS_CATALOG, PRODUCT_FAQS } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import ProductDetailClient from "@/components/sections/ProductDetailClient";
 import ProductMarquee from "@/components/ui/ProductMarquee";
+import FAQ from "@/components/sections/FAQ";
 
 // Generate SSG routes for all products
 export async function generateStaticParams() {
@@ -78,6 +79,16 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
       {/* Product image marquee */}
       <ProductMarquee />
+
+      {/* Product-specific FAQ */}
+      {PRODUCT_FAQS[product.slug] && (
+        <FAQ
+          title={`${product.title} FAQ`}
+          description="Common questions about this product"
+          faqs={PRODUCT_FAQS[product.slug]}
+          variant="light"
+        />
+      )}
     </main>
   );
 }
