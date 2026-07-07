@@ -273,8 +273,8 @@ export const PRODUCTS_CATALOG = [
     temperature: "Up to 120°C",
     description:
       "Rubber Expansion Joint supplied without metal flanges — the buyer provides or reuses their own existing metal flanges. Economical option for replacements where the original flanges are still serviceable.",
-    image: "/products/Rubber-Expansion-Joints-SE-Type.jpg",
-    detailImage: "/products/Rubber-Expansion-Joints-SE-Type-Detail.jpg",
+    image: "/product-images/SE-type.jpeg",
+    detailImage: "/product-images/SE-type.jpeg",
     features: [
       "Metal / steel flanges in the buyer's scope",
       "Reuse existing flanges from old or worn-out bellows",
