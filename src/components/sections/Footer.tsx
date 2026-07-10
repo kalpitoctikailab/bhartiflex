@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center mb-6">
               <Image
-                src="/Bhartiflex-shroff-inline.svg"
+                src="/Bhartiflex-shroff-inline-registered.svg"
                 alt="Bhartiflex"
                 width={160}
                 height={32}
