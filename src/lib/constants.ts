@@ -9,13 +9,21 @@ export const COMPANY_DETAILS = {
   clientsCount: 500,
   /** Use with tel: href (digits, E.164-style) */
   phone: "+919227105232",
+  phoneSecondary: "+912652681232",
+  phoneThird: "+917573018510",
   /** Obfuscated display (no extra labels — section headings provide context) */
   phoneDisplay: "(+91) Nine double two seven one zero five two three two",
+  phoneSecondaryDisplay: "+91 265 2681232",
+  phoneThirdDisplay: "+91 Seven Five Seven Three Zero One Eight Five One Zero",
   emailPrimary: "shroffproducts@gmail.com",
   emailSecondary: "info@shroffprocesspumps.com",
+  emailTertiary: "sppjinesh@gmail.com",
   emailDisplayLine1: "shroffproducts (at) gmail (dot) com",
   emailDisplayLine2: "info (at) shroffprocesspumps (dot) com",
+  emailDisplayLine3: "sppjinesh (at) gmail (dot) com",
   address:
+    "Bhartiflex House Sun Phram - Atladra Road, Vadodara - 390012, Gujarat Bharat",
+  addressOld:
     "A3/121, Associated Society, Old Padra Road, Vadodara - 390020, Gujarat Bharat",
 };
 

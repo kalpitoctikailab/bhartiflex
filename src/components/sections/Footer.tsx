@@ -3,6 +3,7 @@
 import { COMPANY_DETAILS, NAV_LINKS } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -55,29 +56,61 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-6 uppercase tracking-wider font-heading">
               Contact Us
             </h4>
-            <ul className="space-y-4 text-white/55">
-              <li>{COMPANY_DETAILS.address}</li>
-              <li className="space-y-1">
-                <a
-                  href={`mailto:${COMPANY_DETAILS.emailPrimary}`}
-                  className="block hover:text-white transition-colors"
-                >
-                  {COMPANY_DETAILS.emailDisplayLine1}
-                </a>
-                <a
-                  href={`mailto:${COMPANY_DETAILS.emailSecondary}`}
-                  className="block hover:text-white transition-colors"
-                >
-                  {COMPANY_DETAILS.emailDisplayLine2}
-                </a>
+            <ul className="space-y-6 text-white/55">
+              <li className="flex items-start gap-3">
+                <MapPin className="text-primary shrink-0 mt-0.5" size={20} />
+                <div className="space-y-1">
+                  <p className="font-semibold text-white">SHROFF PROCESS PRODUCTS</p>
+                  <p className="font-medium text-white/70">Bhartiflex House</p>
+                  <p>Sun Phram - Atladra Road</p>
+                  <p>Vadodara - 390012, Gujarat Bharat</p>
+                </div>
               </li>
-              <li>
-                <a
-                  href={`tel:${COMPANY_DETAILS.phone}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {COMPANY_DETAILS.phoneDisplay}
-                </a>
+              <li className="flex items-start gap-3">
+                <Phone className="text-primary shrink-0 mt-0.5" size={20} />
+                <div className="space-y-1">
+                  <a
+                    href={`tel:${COMPANY_DETAILS.phoneSecondary}`}
+                    className="block hover:text-white transition-colors"
+                  >
+                    {COMPANY_DETAILS.phoneSecondaryDisplay}
+                  </a>
+                  <a
+                    href={`tel:${COMPANY_DETAILS.phoneThird}`}
+                    className="block hover:text-white transition-colors"
+                  >
+                    {COMPANY_DETAILS.phoneThirdDisplay}
+                  </a>
+                  <a
+                    href={`tel:${COMPANY_DETAILS.phone}`}
+                    className="block hover:text-white transition-colors"
+                  >
+                    {COMPANY_DETAILS.phoneDisplay}
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail className="text-primary shrink-0 mt-0.5" size={20} />
+                <div className="space-y-1">
+                  <a
+                    href={`mailto:${COMPANY_DETAILS.emailPrimary}`}
+                    className="block hover:text-white transition-colors"
+                  >
+                    {COMPANY_DETAILS.emailDisplayLine1}
+                  </a>
+                  <a
+                    href={`mailto:${COMPANY_DETAILS.emailSecondary}`}
+                    className="block hover:text-white transition-colors"
+                  >
+                    {COMPANY_DETAILS.emailDisplayLine2}
+                  </a>
+                  <a
+                    href={`mailto:${COMPANY_DETAILS.emailTertiary}`}
+                    className="block hover:text-white transition-colors"
+                  >
+                    {COMPANY_DETAILS.emailDisplayLine3}
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
