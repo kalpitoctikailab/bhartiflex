@@ -52,7 +52,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
-            src={useLightNavText ? "/Bhartiflex-shroff-inline.svg" : "/Bhartiflex-shroff-inline-white.svg"}
+            src={useLightNavText ? "/Bhartiflex-shroff-inline-registered.svg" : "/Bhartiflex-shroff-inline-white-registered.svg"}
             alt="Bhartiflex"
             width={160}
             height={32}

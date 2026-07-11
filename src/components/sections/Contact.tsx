@@ -102,7 +102,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-text-primary font-bold mb-1">Global Headquarters</h4>
-                  <p className="text-text-secondary text-sm leading-relaxed">{COMPANY_DETAILS.address}</p>
+                  <div className="text-text-secondary text-sm leading-relaxed">
+                    <p className="font-semibold text-text-primary">SHROFF PROCESS PRODUCTS</p>
+                    <p className="font-semibold text-text-primary">Bhartiflex House</p>
+                    <p>Sun Phram - Atladra Road</p>
+                    <p>Vadodara - 390012, Gujarat Bharat</p>
+                  </div>
                 </div>
               </motion.div>
 
@@ -118,12 +123,26 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-text-primary font-bold mb-1">Direct Line</h4>
-                  <a
-                    href={`tel:${COMPANY_DETAILS.phone}`}
-                    className="text-text-secondary text-sm hover:text-primary transition-colors leading-relaxed"
-                  >
-                    {COMPANY_DETAILS.phoneDisplay}
-                  </a>
+                  <div className="text-text-secondary text-sm leading-relaxed space-y-1">
+                    <a
+                      href={`tel:${COMPANY_DETAILS.phoneSecondary}`}
+                      className="block hover:text-primary transition-colors"
+                    >
+                      {COMPANY_DETAILS.phoneSecondaryDisplay}
+                    </a>
+                    <a
+                      href={`tel:${COMPANY_DETAILS.phoneThird}`}
+                      className="block hover:text-primary transition-colors"
+                    >
+                      {COMPANY_DETAILS.phoneThirdDisplay}
+                    </a>
+                    <a
+                      href={`tel:${COMPANY_DETAILS.phone}`}
+                      className="block hover:text-primary transition-colors"
+                    >
+                      {COMPANY_DETAILS.phoneDisplay}
+                    </a>
+                  </div>
                 </div>
               </motion.div>
 
@@ -144,13 +163,19 @@ export default function Contact() {
                       href={`mailto:${COMPANY_DETAILS.emailPrimary}`}
                       className="block hover:text-primary transition-colors"
                     >
-                      {COMPANY_DETAILS.emailDisplayLine1}
+                      {COMPANY_DETAILS.emailDisplayLine1} <span className="text-slate-400">(Sales Enquiry)</span>
                     </a>
                     <a
                       href={`mailto:${COMPANY_DETAILS.emailSecondary}`}
                       className="block hover:text-primary transition-colors"
                     >
-                      {COMPANY_DETAILS.emailDisplayLine2}
+                      {COMPANY_DETAILS.emailDisplayLine2} <span className="text-slate-400">(Technical Enquiry)</span>
+                    </a>
+                    <a
+                      href={`mailto:${COMPANY_DETAILS.emailTertiary}`}
+                      className="block hover:text-primary transition-colors"
+                    >
+                      {COMPANY_DETAILS.emailDisplayLine3} <span className="text-slate-400">(Purchase Enquiry)</span>
                     </a>
                   </div>
                 </div>
