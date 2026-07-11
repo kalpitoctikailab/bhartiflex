@@ -17,6 +17,7 @@ export default function ProductEnquiry({ productTitle, productSlug, selectedDnSi
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [dnSize, setDnSize] = useState("");
   const [faceToFaceLength, setFaceToFaceLength] = useState("");
   const [requirements, setRequirements] = useState("");
@@ -47,6 +48,7 @@ export default function ProductEnquiry({ productTitle, productSlug, selectedDnSi
           firstName,
           lastName,
           email,
+          phone,
           requirements: [
             `Product: ${productTitle} (${productSlug})`,
             (selectedDnSize ?? dnSize) ? `DN Size: ${selectedDnSize ?? dnSize}` : null,
@@ -56,6 +58,7 @@ export default function ProductEnquiry({ productTitle, productSlug, selectedDnSi
             .filter(Boolean)
             .join("\n"),
           recaptchaToken,
+          leadStatus: `Product Page - ${productTitle}`, // Hidden field with page name
         }),
       });
       const data = (await res.json()) as { ok: boolean; error?: string };
@@ -66,6 +69,7 @@ export default function ProductEnquiry({ productTitle, productSlug, selectedDnSi
       setFirstName("");
       setLastName("");
       setEmail("");
+      setPhone("");
       setDnSize("");
       setFaceToFaceLength("");
       setRequirements("");
@@ -254,6 +258,17 @@ export default function ProductEnquiry({ productTitle, productSlug, selectedDnSi
                     required
                     className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                     placeholder="john@company.com"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-slate-600">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                    placeholder="+91 98765 43210"
                   />
                 </div>
 
