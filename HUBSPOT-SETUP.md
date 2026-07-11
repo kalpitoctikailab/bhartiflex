@@ -70,32 +70,58 @@ SMTP_FROM_EMAIL
 1. User fills out contact form
 2. Form validates required fields (firstName, email, requirements)
 3. reCAPTCHA is verified
-4. Data is sent to HubSpot API
+4. Data is sent to HubSpot API with hidden field `leadStatus` (page name)
 5. Contact is created/updated in HubSpot CRM with these fields:
    - **Email** (primary identifier)
    - **First Name**
    - **Last Name**
+   - **Phone Number** (optional)
    - **Company** (if provided)
    - **Message** (requirements/project details)
+   - **Lead Status** → Set to "NEW"
+   - **Lead Source Page** → Hidden field showing which page submitted the form (e.g., "Contact Page" or "Product Page - CU Type")
 
 ### HubSpot Contact Properties Mapping:
 
-| Form Field | HubSpot Property |
-|------------|------------------|
-| firstName | firstname |
-| lastName | lastname |
-| email | email |
-| companyName | company |
-| requirements | message |
+| Form Field | HubSpot Property | Notes |
+|------------|------------------|-------|
+| firstName | firstname | Required |
+| lastName | lastname | Optional |
+| email | email | Required, unique identifier |
+| phone | phone | Optional |
+| companyName | company | Optional |
+| requirements | message | Required |
+| (hidden) leadStatus | lead_source_page | Custom property - page name |
+| - | hs_lead_status | Always set to "NEW" |
 
 ## 🎯 What Happens in HubSpot
 
 After form submission, you'll see:
 - New contact created in **Contacts** section
 - All form data captured in contact properties
+- **Lead Status** set to "NEW" 
+- **Lead Source Page** will show which page the form was submitted from (e.g., "Contact Page" or "Product Page - CU Type")
 - Can set up **workflows** to auto-assign, send notifications, etc.
 - Can create **deals** from these contacts
 - Track all interactions in contact timeline
+
+### Creating the Custom "Lead Source Page" Property
+
+To capture the page name where the form was submitted, you need to create a custom property in HubSpot:
+
+1. **Go to HubSpot Settings** (⚙️ icon)
+2. Navigate to **Properties** (under Data Management)
+3. Click **Create property**
+4. **Configure the property:**
+   - **Object type**: Contact
+   - **Group**: Contact information
+   - **Label**: Lead Source Page
+   - **Internal name**: `lead_source_page` (IMPORTANT: Use exactly this name)
+   - **Description**: "Page where the contact form was submitted"
+   - **Field type**: Single-line text
+5. Click **Create**
+
+**Why this is needed:** The default `hs_lead_status` field only accepts predefined values like NEW, OPEN, IN_PROGRESS, etc. Our custom field `lead_source_page` will store the actual page name.
 
 ## 📊 Optional Custom Properties
 
@@ -106,15 +132,27 @@ properties: {
   email: email,
   firstname: firstName,
   lastname: lastName || "",
+  phone: phone || "",
   company: companyName || "",
   message: requirements,
+  hs_lead_status: "NEW",
+  lead_source_page: leadStatus || "Contact Page",
   // Uncomment these if needed:
-  // hs_lead_status: "NEW",
   // lifecyclestage: "lead",
   // website: "bhartiflex.com",
-  // phone: "(phone number if collected)",
 }
 ```
+
+### Available Lead Status Values:
+If you want to manually change lead status in workflows, use these valid values:
+- `NEW` - Default for new submissions
+- `OPEN` - Contact has been opened/reviewed
+- `IN_PROGRESS` - Working on the lead
+- `OPEN_DEAL` - Deal has been created
+- `UNQUALIFIED` - Not a good fit
+- `ATTEMPTED_TO_CONTACT` - Tried to reach out
+- `CONNECTED` - Successfully contacted
+- `BAD_TIMING` - Not ready right now
 
 ## 🔍 Testing
 
