@@ -67,9 +67,9 @@ export async function POST(req: NextRequest) {
         company: companyName || "",
         message: requirements,
         hs_lead_status: "NEW", // Use valid HubSpot lead status
-        // Custom property for page source (you'll need to create this in HubSpot)
-        // Go to: Settings → Properties → Create property → Name it "lead_source_page"
-        lead_source_page: leadStatus || "Contact Page", // This will store the page name
+        // OPTIONAL: Uncomment below after creating custom property in HubSpot
+        // To create: Settings → Properties → Create property → Internal name: "lead_source_page"
+        // lead_source_page: leadStatus || "Contact Page",
       },
     };
 
