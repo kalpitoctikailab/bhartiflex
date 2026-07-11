@@ -10,6 +10,7 @@ export default function Contact() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [requirements, setRequirements] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -39,9 +40,11 @@ export default function Contact() {
           firstName,
           lastName,
           email,
+          phone,
           companyName,
           requirements,
           recaptchaToken,
+          leadStatus: "Contact Page", // Hidden field with page name
         }),
       });
       const data = (await res.json()) as { ok: boolean; error?: string };
@@ -52,6 +55,7 @@ export default function Contact() {
       setFirstName("");
       setLastName("");
       setEmail("");
+      setPhone("");
       setCompanyName("");
       setRequirements("");
       setRecaptchaToken(null);
@@ -241,6 +245,17 @@ export default function Contact() {
                     placeholder="john@company.com"
                   />
                 </div>
+                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-slate-600">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                    placeholder="+91 98765 43210"
+                  />
+                </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-slate-600">Company Name</label>
@@ -252,7 +267,7 @@ export default function Contact() {
                     placeholder="Acme Industries"
                   />
                 </div>
-
+                </div>
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-slate-600">Project Requirements</label>
                   <textarea 

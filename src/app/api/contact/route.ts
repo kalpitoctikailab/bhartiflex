@@ -9,7 +9,7 @@ const HUBSPOT_CONFIG = {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { firstName, lastName, email, companyName, requirements, recaptchaToken } = body;
+    const { firstName, lastName, email, phone, companyName, requirements, recaptchaToken, leadStatus } = body;
 
     // Validate required fields
     if (!firstName || !email || !requirements) {
@@ -63,10 +63,11 @@ export async function POST(req: NextRequest) {
         email: email,
         firstname: firstName,
         lastname: lastName || "",
+        phone: phone || "",
         company: companyName || "",
         message: requirements,
+        hs_lead_status: leadStatus || "NEW", // Hidden field with page name
         // Additional custom properties you can add:
-        // hs_lead_status: "NEW",
         // lifecyclestage: "lead",
       },
     };
