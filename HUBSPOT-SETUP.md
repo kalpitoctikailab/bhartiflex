@@ -24,16 +24,27 @@
 
 ### Step 2: Add Environment Variable
 
-Add the following to your `.env.local` file:
+**IMPORTANT:** Use `.env.local` for your secrets, NOT `.env`
 
-```env
-# HubSpot Integration
-HUBSPOT_ACCESS_TOKEN=your_access_token_here
+1. Copy `.env.example` to `.env.local`:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-# Google reCAPTCHA (already configured)
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key
-RECAPTCHA_SECRET_KEY=your_secret_key
-```
+2. Edit `.env.local` and add your actual values:
+   ```env
+   # HubSpot Integration
+   HUBSPOT_ACCESS_TOKEN=paste_your_actual_token_here
+   
+   # Google reCAPTCHA (if not already configured)
+   NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key
+   RECAPTCHA_SECRET_KEY=your_secret_key
+   ```
+
+⚠️ **SECURITY WARNING:** 
+- NEVER commit `.env` or `.env.local` files to git
+- These files contain sensitive API keys
+- They are already in `.gitignore`
 
 ### Step 3: Optional - Remove Old SMTP Dependencies
 
