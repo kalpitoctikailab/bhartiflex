@@ -3,7 +3,7 @@
 import { COMPANY_DETAILS, NAV_LINKS } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Youtube, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -25,9 +25,40 @@ export default function Footer() {
               Leading manufacturer, supplier & exporter of Rubber Expansion
               Joints & Bellows.
             </p>
-            <p className="font-mono text-sm tracking-wider text-white/45 uppercase">
+            <p className="font-mono text-sm tracking-wider text-white/45 uppercase mb-4">
               Est. {COMPANY_DETAILS.yearFounded}
             </p>
+            
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.instagram.com/bhartiflex_bellows/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} className="text-white" />
+              </a>
+              <a
+                href="https://www.youtube.com/@Bhartiflex_bellows"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="YouTube"
+              >
+                <Youtube size={20} className="text-white" />
+              </a>
+              <a
+                href="https://www.facebook.com/bhartiflexbellows/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Facebook"
+              >
+                <Facebook size={20} className="text-white" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
