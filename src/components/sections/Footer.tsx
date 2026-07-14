@@ -3,7 +3,7 @@
 import { COMPANY_DETAILS, NAV_LINKS } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Instagram, Youtube, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -56,7 +56,20 @@ export default function Footer() {
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Facebook"
               >
-                <Facebook size={20} className="text-white" />
+                {/* Facebook SVG Icon */}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-white"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
               </a>
             </div>
           </div>
