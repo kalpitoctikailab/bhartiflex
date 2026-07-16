@@ -44,11 +44,11 @@ export default function ProductMarquee() {
   return (
     <div className="w-full bg-white border-t border-slate-200 py-12 overflow-hidden">
       <div className="relative">
-        <div className="flex gap-6 animate-marquee w-max">
+        <div className="flex gap-6 animate-marquee w-max cursor-pointer">
           {items.map((imageSrc, i) => (
             <div
               key={`carousel-${i}`}
-              className="shrink-0"
+              className="shrink-0 transition-transform duration-300 hover:scale-105"
             >
               <div className="w-80 h-80 rounded-2xl overflow-hidden border border-slate-100 bg-slate-50 shadow-sm">
                 <Image

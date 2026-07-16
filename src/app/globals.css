@@ -112,7 +112,11 @@
   }
 
   .animate-marquee {
-    animation: marquee 40s linear infinite;
+    animation: marquee 80s linear infinite; /* Slowed down from 40s to 80s */
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused; /* Pause on hover */
   }
 
   /* Smooth scrolling animation for trust bar */
