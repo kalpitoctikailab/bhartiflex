@@ -169,19 +169,19 @@ export default function Footer() {
                     href={`mailto:${COMPANY_DETAILS.emailPrimary}`}
                     className="block hover:text-white transition-colors"
                   >
-                    {COMPANY_DETAILS.emailDisplayLine1}
+                    {COMPANY_DETAILS.emailDisplayLine1} (Sales Enquiry)
                   </a>
                   <a
                     href={`mailto:${COMPANY_DETAILS.emailSecondary}`}
                     className="block hover:text-white transition-colors"
                   >
-                    {COMPANY_DETAILS.emailDisplayLine2}
+                    {COMPANY_DETAILS.emailDisplayLine2} (Technical Enquiry)
                   </a>
                   <a
                     href={`mailto:${COMPANY_DETAILS.emailTertiary}`}
                     className="block hover:text-white transition-colors"
                   >
-                    {COMPANY_DETAILS.emailDisplayLine3}
+                    {COMPANY_DETAILS.emailDisplayLine3} (Purchase Enquiry)
                   </a>
                 </div>
               </li>
