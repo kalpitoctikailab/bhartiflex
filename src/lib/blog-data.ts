@@ -207,7 +207,7 @@ At SHROFF Process Products, we specialize in hand-built bellows where rubber sel
 
 The rubber material is the heart of every expansion bellow. By selecting the right elastomer—whether EPDM, Neoprene, Nitrile, or specialized blends—Bhartiflex bellows by SHROFF Process Products deliver unmatched reliability in the toughest industrial environments. Our expertise in hand-built construction ensures that every bellow is engineered for durability, safety, and performance.
     `,
-    image: "/blog/selecting the right rubber for expansion bellows.jpg.jpeg",
+    image: "/blog/selecting the right rubber for expansion bellows.jpeg",
     category: "Materials",
     author: {
       name: "Bhartiflex Engineering",
@@ -270,7 +270,7 @@ Rubber expansion joints and bellows are critical in pipelines, absorbing vibrati
 
 Procurement of rubber expansion joints and bellows is not just about price—it's about reliability, compatibility, and safety. By following these tips, procurement teams can ensure they receive the right product, avoid costly mismatches, and maintain long-term vendor relationships. With Bhartiflex by SHROFF Process Products, buyers gain access to custom-engineered solutions, hand-built bellows, and tested control units trusted across India's power, steel, and chemical industries.
     `,
-    image: "/blog/procurement tips for rubber expansion joints & bellows.jpg.jpeg",
+    image: "/blog/procurement tips for rubber expansion joints & bellows.jpeg",
     category: "Procurement",
     author: {
       name: "Bhartiflex Sales",
